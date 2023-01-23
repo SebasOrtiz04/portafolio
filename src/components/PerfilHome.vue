@@ -20,15 +20,15 @@ import { Options, Vue } from 'vue-class-component';
 
 @Options({
     mounted(){
-        const titulo:Element = document.querySelector('#saludo');
-        const texto:Element = document.querySelector('#saludo-texto');
+        const titulo:HTMLElement = this.$el.querySelector('#saludo');
+        const texto:HTMLElement = this.$el.querySelector('#saludo-texto');
         this.scroll(titulo);
         this.scroll(texto);
 
     },
     methods:{
-        scroll(element:Element){
-            const contenedor:Element = document.querySelector('#contenedor-saludo');
+        scroll(element:HTMLElement){
+            const contenedor:HTMLElement = this.$el.querySelector('#contenedor-saludo');
             console.log(contenedor);
             window.addEventListener('scroll', function(){
                 if(contenedor.getBoundingClientRect().top < 0){
