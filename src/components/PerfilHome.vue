@@ -1,9 +1,9 @@
 <template>
-    <section class="contenedor" id="contenedor-saludo">
+    <section class="contenedor" ref="contenedor">
 
         <div class="contenido">
-            <h1 id="saludo">HI!</h1>
-            <p id="saludo-texto">I´m fullstack developer and i love create simply and util plataforms,
+            <h1 ref="titulo">HI!</h1>
+            <p ref="saludoTexto">I´m fullstack developer and i love create simply and util plataforms,
                 i desing and develope user interfaces, back end, data bases and i can too 
                 conect robot and houses to internet, the future is Iot and Indusrtry 4.0 and it is now.
             </p>
@@ -16,20 +16,17 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
+// import {ref} from 'vue';
 
 
 @Options({
     mounted(){
-        const titulo:HTMLElement = this.$el.querySelector('#saludo');
-        const texto:HTMLElement = this.$el.querySelector('#saludo-texto');
-        this.scroll(titulo);
-        this.scroll(texto);
-
+        this.scroll(this.$refs.titulo);
+        this.scroll(this.$refs.saludoTexto);
     },
     methods:{
         scroll(element:HTMLElement){
-            const contenedor:HTMLElement = this.$el.querySelector('#contenedor-saludo');
-            console.log(contenedor);
+            const contenedor = this.$refs.contenedor;
             window.addEventListener('scroll', function(){
                 if(contenedor.getBoundingClientRect().top < 0){
                     element.style.opacity = '1';
