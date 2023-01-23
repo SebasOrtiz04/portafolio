@@ -9,6 +9,8 @@
             </p>
         </div>
 
+        <Boton />
+
     </section>
 
 
@@ -16,10 +18,14 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
+import Boton from '@/components/BotonAnimado.vue';
 // import {ref} from 'vue';
 
 
 @Options({
+    components:{
+        Boton
+    },
     mounted(){
         this.scroll(this.$refs.titulo);
         this.scroll(this.$refs.saludoTexto);
@@ -28,7 +34,7 @@ import { Options, Vue } from 'vue-class-component';
         scroll(element:HTMLElement){
             const contenedor = this.$refs.contenedor;
             window.addEventListener('scroll', function(){
-                if(contenedor.getBoundingClientRect().top < 0){
+                if(contenedor.getBoundingClientRect().top < 100){
                     element.style.opacity = '1';
                 } else{
                     element.style.opacity = '0';
@@ -51,26 +57,28 @@ export default class PerfilHome extends Vue {}
     margin-top:1rem;
     background-color: $blanco;
     padding: 5rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
-    @include telefono{
+    @include desktop{
         margin-top:7rem;
+        height: 100vh;
     }
 }
 
 .contenido{
     width: 95%;
     margin: 0 auto;
-    padding-top: 10rem;
-    min-height: 100vh;
     display:flex;
     flex-direction: column;
     align-items: center;
-    @include telefono{
-        width: 70%;
+    @include tablet{
+        width: 85%;
     }
 
     h1{
-        font-size: 30rem;
+        font-size: 25rem;
         margin:0;
         background: linear-gradient( to bottom,$azulMedio, $azulClaro, $azulObscuro ,$azulMedio);
         background-clip: text;
