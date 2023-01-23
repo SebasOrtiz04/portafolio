@@ -1,0 +1,62 @@
+//Globales
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+#app{
+  font-family: $fuente;
+  background-color: $azulObscuro;
+  color:$azulObscuro;
+}
+
+h1,h2,h3{
+  font-family: $fuenteTitulos;
+  color:$azulObscuro;
+}
+
+h1{
+  font-size:7rem;
+}
+
+p{
+  font-size: 3rem;
+}
+
+@keyframes entradaDifuminado{
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes textoHover{
+  0%{
+    transform: translateY(0);
+  }
+
+  50%{
+    transform: translateY(-4rem);
+  }
+
+  100%{
+    transform: translateY(0);
+  }
+}
+
+@keyframes textoEntrada{
+  from{
+    width: 0;
+  }
+  to{
+    width: 100%;
+  }
+}
