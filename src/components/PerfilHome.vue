@@ -29,6 +29,7 @@ import Boton from '@/components/BotonAnimado.vue';
     mounted(){
         this.scroll(this.$refs.titulo);
         this.scroll(this.$refs.saludoTexto);
+
     },
     methods:{
         scroll(element:HTMLElement){
