@@ -1,7 +1,7 @@
 <template>
     <div class="contenedor-boton">
         <div class="contenido">
-            <a :href="referencia">Boton</a>
+            <a :href="referencia">{{label}}</a>
         </div>
     </div>
 
@@ -13,32 +13,13 @@ import { Options, Vue } from 'vue-class-component';
 
 
 @Options({
-    data(){
-        return{
-            referencia:'#'
-        }
-    },
-    mounted(){
-        this.scroll(this.$refs.titulo);
-        this.scroll(this.$refs.saludoTexto);
-    },
-    methods:{
-        scroll(element:HTMLElement){
-            const contenedor = this.$refs.contenedor;
-            window.addEventListener('scroll', function(){
-                if(contenedor.getBoundingClientRect().top < 100){
-                    element.style.opacity = '1';
-                } else{
-                    element.style.opacity = '0';
-                }
-                
-            })
-        }
-    }
+    props:['label','referencia']
 })
 export default class BotonAnimado extends Vue {
 referencia: string | undefined;
+label: string | undefined;
 }
+
 </script>
 
 

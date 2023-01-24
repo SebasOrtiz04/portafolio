@@ -9,7 +9,7 @@
             </p>
         </div>
 
-        <Boton />
+        <Boton label="My skills" referencia="#" />
 
     </section>
 
@@ -32,7 +32,7 @@ import Boton from '@/components/BotonAnimado.vue';
     },
     methods:{
         scroll(element:HTMLElement){
-            const contenedor = this.$refs.contenedor;
+            const contenedor:HTMLElement = this.$refs.contenedor;
             window.addEventListener('scroll', function(){
                 if(contenedor.getBoundingClientRect().top < 100){
                     element.style.opacity = '1';
@@ -61,7 +61,7 @@ export default class PerfilHome extends Vue {}
     flex-direction: column;
     justify-content: space-evenly;
 
-    @include desktop{
+    @include telefono{
         margin-top:7rem;
         height: 100vh;
     }

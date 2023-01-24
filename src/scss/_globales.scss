@@ -52,6 +52,20 @@ p{
   }
 }
 
+@keyframes sobraTextoHover{
+  0%{
+    opacity:.7;
+  }
+
+  50%{
+    opacity:.2;
+  }
+
+  100%{
+    opacity:.7;
+  }
+}
+
 @keyframes textoEntrada{
   from{
     width: 0;
