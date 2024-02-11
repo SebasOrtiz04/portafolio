@@ -1,4 +1,4 @@
-import Carrucel from '@/components/headers/rootCarrucel';
+import Carrucel from '@/components/headers/rootCarrucel/rootCarrucel';
 import React from 'react'
 
 
@@ -8,6 +8,7 @@ export const metadata = {
 };
 
 export default function Home() {
+  
   return (
     <div>
       <Carrucel/>

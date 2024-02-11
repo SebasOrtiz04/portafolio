@@ -1,0 +1,11 @@
+img.carrucel{
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 920px) {
+    img.carrucel{
+        height: 100vh;
+        width: auto;
+    }
+}
