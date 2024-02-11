@@ -23,6 +23,9 @@ const theme = createTheme({
       dark: '#ba000d',
       contrastText: '#000',
     },
+    blackMask:{
+      main: 'rgba(0,0,0,0.5)'
+    }
   },
   typography: {
     fontFamily: roboto.style.fontFamily,
