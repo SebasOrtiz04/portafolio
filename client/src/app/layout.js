@@ -5,6 +5,7 @@ import NavBar from "@/layouts/navBar";
 import { rootLayoutStyles } from "@/app/styles/mainStyles";
 import { ThemeProvider } from "@emotion/react";
 import theme from "@/theme";
+import Footer from '@/layouts/footer';
 
 const {body} =  rootLayoutStyles;
 
@@ -24,7 +25,10 @@ export default function RootLayout({ children }) {
             
           </AppRouterCacheProvider>
         </main>
+
+        <Footer/>
       </body>
+
       </ThemeProvider>
     </html>
   );

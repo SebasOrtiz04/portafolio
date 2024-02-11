@@ -1,6 +1,7 @@
-import Carrucel from '@/components/headers/rootCarrucel/rootCarrucel';
+import Carrucel from '@/components/home/rootCarrucel/rootCarrucel';
+import Services from '@/components/home/services/services';
 import React from 'react'
-
+import {Box} from '@mui/material'
 
 export const metadata = {
   title: "Orca Eventos Sociales",
@@ -10,8 +11,10 @@ export const metadata = {
 export default function Home() {
   
   return (
-    <div>
+    <Box sx={{maxWidth:'100vw',overflowX:'hidden'}}>
       <Carrucel/>
-    </div>
+
+      <Services/>
+    </Box>
   )
 }

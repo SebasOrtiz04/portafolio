@@ -1,3 +1,4 @@
 export const rootLayoutStyles = {
-    body:{margin:'0'}
+    body:{margin:'0'},
+    rootChildren:{}
 }
