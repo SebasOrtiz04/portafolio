@@ -11,8 +11,9 @@ import styles from './styles.module.css'
 import { carrucelStyles } from '@/app/styles/carrucleStyles';
 import { imagesInitialState } from '@/lib/data/initialStates/carrucel';
 import { useEffect } from 'react';
+import Image from 'next/image'
 
-const {container, imageContainer} = carrucelStyles;
+const {container, imageContainer, contentContainer, mobileStepper} = carrucelStyles;
 
 function Carrucel() {
     
@@ -48,19 +49,19 @@ function Carrucel() {
 <Box sx={container}>
 
         <div style={imageContainer}>
-            <img
+            <Image
                 srcSet={imagesInitialState[activeStep].imgPath}
                 src={imagesInitialState[activeStep].imgPath}
                 alt={imagesInitialState[activeStep].label}
-                loading="lazy"
                 width={300}
                 height={200}
                 className={styles.carrucel}
+                priority 
             />
         </div>
 
     
-    <Box sx={{zIndex:20,position:'fixed',width:'100%',backgroundColor:'rgba(0,0,0,0.9)',height:'100%'}}>
+    <Box sx={contentContainer}>
       {imagesInitialState[activeStep].content}
     </Box>
 
@@ -70,7 +71,7 @@ function Carrucel() {
         color="secondary"
         variant='dots'
         activeStep={activeStep}
-        sx={{backgroundColor:'transparent'}}
+        sx={mobileStepper}
         nextButton={
           <Button size="medium" color="white" onClick={handleNext} disabled={activeStep === maxSteps - 1} >
             Siguiente

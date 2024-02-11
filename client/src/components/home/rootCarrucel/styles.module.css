@@ -3,6 +3,11 @@ img.carrucel{
     height: auto;
 }
 
+.carrucel__text{
+    color:rgba(255,255,255,0.7);
+    font-size: large;
+}
+
 @media (max-width: 920px) {
     img.carrucel{
         height: 100vh;
