@@ -17,6 +17,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import Image from 'next/image'
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -170,16 +171,24 @@ export default function NavBar() {
           >
             <MenuIcon />
           </IconButton> */}
+
+          {/* <Image
+            srcSet='/img/Logos/logo.jpg'
+            src='/img/Logos/logo.jpg'
+            alt='Logo Orca Eventos Sociales'
+            priority
+            width={300}
+            height={200}
+          /> */}
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ display: { xs: 'none', sm: 'block' } }}
           >
             Orca Eventos Sociales
           </Typography>
           
-          <Search>
+          {/* <Search>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
@@ -187,7 +196,7 @@ export default function NavBar() {
               placeholder="Buscar..."
               inputProps={{ 'aria-label': 'search' }}
             />
-          </Search>
+          </Search> */}
 
           {/* <Box sx={{ flexGrow: 1 }} />
 

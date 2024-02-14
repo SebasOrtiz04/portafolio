@@ -1,4 +1,5 @@
 export const rootLayoutStyles = {
     body:{margin:'0'},
-    rootChildren:{}
+    rootChildren:{},
+    flexCol:{display: 'flex',flexDirection: 'column',}
 }

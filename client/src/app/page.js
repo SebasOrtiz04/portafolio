@@ -2,6 +2,7 @@ import Carrucel from '@/components/home/rootCarrucel/rootCarrucel';
 import Services from '@/components/home/services/services';
 import React from 'react'
 import {Box} from '@mui/material'
+import { VideoPaneo } from '@/components/home/videoPaneo/videoPaneo';
 
 export const metadata = {
   title: "Orca Eventos Sociales",
@@ -15,6 +16,8 @@ export default function Home() {
       <Carrucel/>
 
       <Services/>
+
+      <VideoPaneo/>
     </Box>
   )
 }
