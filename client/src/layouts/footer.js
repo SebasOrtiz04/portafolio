@@ -1,17 +1,23 @@
 import * as React from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
+import styles from './styles.module.css'
+import { useTheme } from '@mui/material/styles';
+import { rootLayoutStyles } from '@/app/styles/mainStyles';
+import { footerStyles } from '@/app/styles/layoutStyles';
+
+const {flexcol} = rootLayoutStyles;
+const {footer} = footerStyles;
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="text.secondary">
+    <Typography variant="body2" color="white" className={styles.footer__text}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Orca Eventos Sociales Web Site
+        Orca Eventos Sociales
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -19,39 +25,25 @@ function Copyright() {
   );
 }
 
-// TODO remove, this demo shouldn't need to reset the theme.
-const defaultTheme = createTheme();
 
 export default function Footer() {
+
+  const theme = useTheme();
+  
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-        }}
-      >
-        <CssBaseline />
-        <Box
-          component="footer"
-          sx={{
-            py: 3,
-            px: 2,
-            mt: 'auto',
-            backgroundColor: (theme) =>
-              theme.palette.mode === 'light'
-                ? theme.palette.grey[200]
-                : theme.palette.grey[800],
-          }}
+
+      <Box  sx={flexcol}>
+
+        <Box component="footer" sx={{...footer,backgroundColor: theme.palette.primary.main}}
         >
           <Container maxWidth="sm">
-            <Typography variant="body1">
+            <Typography variant="body1" className={styles.footer__text}>
               Orca Eventos Sociales.
             </Typography>
             <Copyright />
           </Container>
         </Box>
       </Box>
-    </ThemeProvider>
+
   );
 }

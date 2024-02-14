@@ -6,10 +6,10 @@ import ServicesCard from '@/components/cards/serviceCard/serviceCard'
 
 export default function Services() {
   return (
-    <Container sx={{width:'100vw'}}>
+    <Container>
       <Title1 title='Nuestros Servicios'/>
 
-      <Stack margin="3rem" direction="row" useFlexGap flexWrap="wrap" spacing={5} width={'100%'} justifyContent={'center'}>
+      <Stack marginY="3rem" direction="row" useFlexGap flexWrap="wrap" spacing={5} width={'100%'} justifyContent={'center'}>
         {
             servicesInitialState.map(({serviceTitle,serviceDescription,imagePath},key) =>(
                 <ServicesCard
