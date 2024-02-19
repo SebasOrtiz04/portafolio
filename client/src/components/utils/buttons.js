@@ -48,7 +48,7 @@ export const GoogleCalendarButton = () => {
         <Button onClick={openModal} variant='outlined' endIcon={<EditCalendarIcon/>}>
             
             <Typography>
-            Agenda una cita y te contactaremos
+            Agenda una cita informativa
             </Typography>
             
         </Button>
