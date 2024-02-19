@@ -3,6 +3,8 @@ import Services from '@/components/home/services/services';
 import React from 'react'
 import {Box} from '@mui/material'
 import { VideoPaneo } from '@/components/home/videoPaneo/videoPaneo';
+import HomeContact from '@/components/home/homeContact/homeContact';
+import HomeGaleria from '@/components/home/homeGaleria/homeGaleria';
 
 export const metadata = {
   title: "Orca Eventos Sociales",
@@ -18,6 +20,10 @@ export default function Home() {
       <Services/>
 
       <VideoPaneo/>
+      <HomeGaleria/>
+      <HomeContact/>
+
+      
     </Box>
   )
 }
