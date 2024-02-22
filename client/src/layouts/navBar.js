@@ -160,7 +160,7 @@ export default function NavBar() {
 
   return (
     <Box sx={{ flexGrow: 1}}>
-      <AppBar position="fixed" color='primary' sx={{height:'4rem', display:'flex'}}>
+      <AppBar position="fixed" color='primary' sx={{height:80, display:'flex',justifyContent:'center'}}>
         <Toolbar>
           {/* <IconButton
             size="large"
@@ -172,21 +172,22 @@ export default function NavBar() {
             <MenuIcon />
           </IconButton> */}
 
-          {/* <Image
-            srcSet='/img/Logos/logo.jpg'
-            src='/img/Logos/logo.jpg'
+          <Image
+            srcSet='/img/Logos/logo.png'
+            src='/img/Logos/logo.png'
             alt='Logo Orca Eventos Sociales'
             priority
-            width={300}
-            height={200}
-          /> */}
-          <Typography
+            width={131}
+            height={72}
+          />
+
+          {/* <Typography
             variant="h6"
             noWrap
             component="div"
           >
             Orca Eventos Sociales
-          </Typography>
+          </Typography> */}
           
           {/* <Search>
             <SearchIconWrapper>
