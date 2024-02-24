@@ -39,6 +39,7 @@ class ContactMail extends Mailable
     {
         return new Envelope(
             subject: 'Gracias por contactarnos',
+            bcc:['dako_sebas@hotmail.com']
         );
     }
 

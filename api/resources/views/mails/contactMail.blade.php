@@ -127,23 +127,23 @@
         <ul>
             <li>
                 
-                <p>Nombre Completo.</p>
+                <p>Nombre Completo:</p>
                 <strong>{{$fullName}}</strong>                
             </li>
             <li>
-                <p>Email.</p>
+                <p>Email:</p>
                 <strong>{{$email}}</strong>                
             </li>
             <li>
-                <p>Número telefónico.</p>
+                <p>Número telefónico:</p>
                 <strong>{{$phone}}</strong>                
             </li>
             <li>
-                <p>Fecha de interes.</p>
+                <p>Fecha de interes:</p>
                 <strong>{{$date}}</strong>                
             </li>
             <li>
-                <p>Mensaje.</p>
+                <p>Mensaje:</p>
                 <strong>{{$contactMessage}}</strong>                
             </li>
         </ul>
