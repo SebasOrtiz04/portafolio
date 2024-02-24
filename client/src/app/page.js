@@ -16,14 +16,10 @@ export default function Home() {
   return (
     <Box sx={{maxWidth:'100vw',overflowX:'hidden'}}>
       <Carrucel/>
-
       <Services/>
-
       <VideoPaneo/>
       <HomeGaleria/>
       <HomeContact/>
-
-      
     </Box>
   )
 }

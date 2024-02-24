@@ -25,10 +25,10 @@ class ContactMailRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'full_name' => 'required|string|max:150',
+            'fullName' => 'required|string|max:150',
             'email' => 'required|email',
-            'phone' => 'required|string|regex:/^\d{10}$/',
-            'contact_message' => 'required|string|max:512',
+            'phone' => 'nullable|string|regex:/^\d{10}$/',
+            'contactMessage' => 'required|string|max:512',
             'date' => 'nullable|date'
         ];
     }

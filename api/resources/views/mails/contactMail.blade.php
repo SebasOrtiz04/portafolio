@@ -115,7 +115,7 @@
     <div class="image__container">
         <img src="https://onedrive.live.com/embed?resid=BD1FF916B6BD6689%21219&authkey=%21AGLIqVXygQv1MQY&width=131&height=71" width="131" height="71" />
     </div>
-        <h2>Hola {{$full_name}}!</h2>
+        <h2>Hola {{$fullName}}!</h2>
     
         <h1>
             Confirmación de contacto. 
@@ -126,24 +126,25 @@
         <h4>Hemos recibido tu mensaje con la siguiente información:</h4>
         <ul>
             <li>
-                <strong>{{$full_name}}</strong>
+                
                 <p>Nombre Completo.</p>
+                <strong>{{$fullName}}</strong>                
             </li>
             <li>
-                <strong>{{$email}}</strong>
                 <p>Email.</p>
+                <strong>{{$email}}</strong>                
             </li>
             <li>
-                <strong>{{$phone}}</strong>
                 <p>Número telefónico.</p>
+                <strong>{{$phone}}</strong>                
             </li>
             <li>
-                <strong>{{$date}}</strong>
                 <p>Fecha de interes.</p>
+                <strong>{{$date}}</strong>                
             </li>
             <li>
-                <strong>{{$contact_message}}</strong>
                 <p>Mensaje.</p>
+                <strong>{{$contactMessage}}</strong>                
             </li>
         </ul>
         <h4>Nos pondremos en contacto contigo lo antes posible.</h4>

@@ -1,1 +1,0 @@
-export const MOSTRAR_ALERTA='MOSTRAR_ALERTA';

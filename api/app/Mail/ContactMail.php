@@ -14,21 +14,21 @@ class ContactMail extends Mailable
     use Queueable, SerializesModels;
 
 
-    public $full_name;
+    public $fullName;
     public $email;
     public $phone;
-    public $contact_message;
+    public $contactMessage;
     public $date;
 
     /**
-     * Create a new contact_message instance.
+     * Create a new contactMessage instance.
      */
-    public function __construct($full_name,$email,$phone,$contact_message,$date)
+    public function __construct($fullName,$email,$phone,$contactMessage,$date)
     {
-        $this->full_name = $full_name;
+        $this->fullName = $fullName;
         $this->email = $email;
         $this->phone = $phone;
-        $this->contact_message = $contact_message;
+        $this->contactMessage = $contactMessage;
         $this->date = $date;
     }
 
