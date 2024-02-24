@@ -16,10 +16,10 @@ class MailerController extends Controller
         $email = $request->input('email');
         // Crea una nueva instancia de la clase de correo electrónico y pasa los datos
         $correo = new ContactMail(
-            $request->input('full_name'),
+            $request->input('fullName'),
             $request->input('email'),
             $request->input('phone'),
-            $request->input('contact_message'),
+            $request->input('contactMessage'),
             $request->input('date')
         );
 

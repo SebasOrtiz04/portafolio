@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Provider } from 'react-redux'
-import store from "@/store"
+import store from "@/redux/store"
 import { AppCacheProvider } from '@mui/material-nextjs/v13-pagesRouter';
 
 
