@@ -12,12 +12,14 @@ import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
+import Stack from '@mui/material/Stack'
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import Image from 'next/image'
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -160,7 +162,7 @@ export default function NavBar() {
 
   return (
     <Box sx={{ flexGrow: 1}}>
-      <AppBar position="fixed" color='primary' sx={{height:80, display:'flex',justifyContent:'center'}}>
+      <AppBar position="fixed" color='primary' sx={{display:'flex',justifyContent:'center'}}>
         <Toolbar>
           {/* <IconButton
             size="large"
@@ -172,22 +174,25 @@ export default function NavBar() {
             <MenuIcon />
           </IconButton> */}
 
+          <Stack direction='row' gap={2} alignItems='center'>
           <Image
-            srcSet='/img/Logos/logo.png'
-            src='/img/Logos/logo.png'
+            srcSet='/img/Logos/orca2.png'
+            src='/img/Logos/orca2.png'
             alt='Logo Orca Eventos Sociales'
             priority
-            width={131}
-            height={72}
+            width={80}
+            height={80}
           />
 
-          {/* <Typography
+          <Typography
             variant="h6"
             noWrap
             component="div"
           >
             Orca Eventos Sociales
-          </Typography> */}
+          </Typography>
+          </Stack>
+
           
           {/* <Search>
             <SearchIconWrapper>
@@ -199,15 +204,20 @@ export default function NavBar() {
             />
           </Search> */}
 
-          {/* <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ flexGrow: 1 }} />
 
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
-              </Badge>
+            <IconButton 
+            size="large" 
+            aria-label="Enlace Facebook" 
+            color="inherit"
+            type='href'
+            target='_blank'
+            href='https://www.facebook.com/profile.php?id=61556546690736'
+            >
+                <FacebookIcon />
             </IconButton>
-            <IconButton
+            {/* <IconButton
               size="large"
               aria-label="show 17 new notifications"
               color="inherit"
@@ -215,8 +225,8 @@ export default function NavBar() {
               <Badge badgeContent={17} color="error">
                 <NotificationsIcon />
               </Badge>
-            </IconButton>
-            <IconButton
+            </IconButton> */}
+            {/* <IconButton
               size="large"
               edge="end"
               aria-label="account of current user"
@@ -226,9 +236,9 @@ export default function NavBar() {
               color="inherit"
             >
               <AccountCircle />
-            </IconButton>
+            </IconButton> */}
           </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+          {/* <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="show more"

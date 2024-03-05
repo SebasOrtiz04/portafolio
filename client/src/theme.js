@@ -8,12 +8,12 @@ const theme = createTheme({
     primary: {
       light: '#000000',
       main: 'rgba(20,20,20,0.8)',
-      dark: '#607168',
+      dark: '#607168 ',
       contrastText: '#fff',
     },
     secondary: {
       light: '#ff7961',
-      main: '#caf1dd',
+      main: '#dac996',
       dark: '#ba000d',
       contrastText: '#000',
     },
