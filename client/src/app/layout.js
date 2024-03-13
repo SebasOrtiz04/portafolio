@@ -1,11 +1,11 @@
 "use client"
 
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
-import NavBar from "@/layouts/navBar";
+import NavBar from "@/components/layouts/navBar";
 import { rootLayoutStyles } from "@/app/styles/mainStyles";
 import { ThemeProvider } from "@emotion/react";
 import theme from "@/theme";
-import Footer from '@/layouts/footer';
+import Footer from '@/components/layouts/footer';
 import {Provider} from 'react-redux';
 import store from '@/redux/store';
 import { RootAlert } from '@/components/utils/alerts';
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         <header>
           <NavBar/>
         </header>
-        <main>
+        <main style={{marginTop:80}}>
           <AppRouterCacheProvider>
             
               {children}

@@ -61,7 +61,7 @@ export default function FormEmail() {
     <Card >
         <CardContent>
 
-        <Stack direction='rows' useFlexGap flexWrap='wrap' spacing={3}>
+        <Stack direction={'row'} useFlexGap flexWrap='wrap' spacing={3}>
             {formInputs.map(({label,required,width = 250,name,multiline = false},key) =>(
                 <TextField
                 key={key}
@@ -72,7 +72,7 @@ export default function FormEmail() {
                 aria-label={label}
                 sx={{width:width}}
                 multiline = {multiline}
-                error = {!validateForm[name].status && form[name]}
+                error = {!validateForm[name].status && form[name ? true : false]}
                 color={validateForm[name].status ? 'success' : 'error'}
                 onChange={e => setForm(handleInput(form,e.target))}
                 helperText={!validateForm[name].status && validateForm[name].helpText}
