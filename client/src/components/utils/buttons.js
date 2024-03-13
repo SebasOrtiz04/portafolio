@@ -9,9 +9,9 @@ import EditCalendarIcon from '@mui/icons-material/EditCalendar';
 
 const whatsAppHRef = 'https://wa.me/2226622778?text=Hola,%20estoy%20interesado%20en%20el%20salón%20jardín.';
 
-export const WhatsAppTextButton = ({text = 'Contáctanos'}) =>{
+export const WhatsAppTextButton = ({text = 'Contáctanos',color='white'}) =>{
     return(                 
-        <Button aria-label='contactanos por whatsapp' endIcon={<WhatsAppIcon color='success'/>} color='white' size="large"
+        <Button aria-label='contactanos por whatsapp' endIcon={<WhatsAppIcon color='success'/>} color={color} size="large"
         href={whatsAppHRef} target='_blank'
         >
             {text}

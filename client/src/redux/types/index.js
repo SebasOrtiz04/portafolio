@@ -7,3 +7,8 @@ export const emailTypes = {
     SEND_CONTACT_EMAIL : 'SEND_CONTACT_EMAIL', 
     SEND_CONTACT_EMAIL_STATUS : 'SEND_CONTACT_EMAIL_STATUS', 
 }
+
+export const menuTypes = {
+    OPEN_MENU : 'OPEN_MENU', 
+    CLOSE_MENU : 'CLOSE_MENU', 
+}

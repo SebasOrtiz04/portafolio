@@ -20,6 +20,12 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import Image from 'next/image'
 import FacebookIcon from '@mui/icons-material/Facebook';
+import CustomMenu from './menu';
+import { OpenMenu } from '@/redux/actions/MenuActions';
+import {useDispatch} from 'react-redux';
+import {useTheme} from '@mui/material'
+import Link from 'next/link';
+import styles from './styles.module.css';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -62,6 +68,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function NavBar() {
+
+  const dispatch = useDispatch();
+  const theme = useTheme();
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -162,18 +172,23 @@ export default function NavBar() {
 
   return (
     <Box sx={{ flexGrow: 1}}>
-      <AppBar position="fixed" color='primary' sx={{display:'flex',justifyContent:'center'}}>
-        <Toolbar>
-          {/* <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton> */}
 
+      <IconButton
+        size="large"
+        edge="start"
+        color="inherit"
+        aria-label="open drawer"
+        sx={{ mr: 2 ,position:'fixed',right:10,bottom:20,zIndex:100,display:{xs:'block', md:'none'}}}
+        onClick={() => dispatch(OpenMenu())}
+      >
+        <MenuIcon sx={{fontSize:'3rem'}} color='secondary.contrastText' />
+      </IconButton>
+
+      <AppBar position="fixed" color='primary' sx={{display:'flex',justifyContent:'center',height:80}}>
+        <Toolbar>
+
+
+          <Link href='/' className={styles.a}>
           <Stack direction='row' gap={2} alignItems='center'>
           <Image
             srcSet='/img/Logos/orca2.png'
@@ -188,10 +203,12 @@ export default function NavBar() {
             variant="h6"
             noWrap
             component="div"
+            sx={{ display: { xs: 'none', sm: 'flex' }}}
           >
             Orca Eventos Sociales
           </Typography>
           </Stack>
+          </Link>
 
           
           {/* <Search>
@@ -206,8 +223,8 @@ export default function NavBar() {
 
           <Box sx={{ flexGrow: 1 }} />
 
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton 
+          <Stack direction={'row'} alignItems={'center'}>
+          <IconButton 
             size="large" 
             aria-label="Enlace Facebook" 
             color="inherit"
@@ -216,40 +233,19 @@ export default function NavBar() {
             href='https://www.facebook.com/profile.php?id=61556546690736'
             >
                 <FacebookIcon />
-            </IconButton>
-            {/* <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-            >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton> */}
-            {/* <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton> */}
-          </Box>
-          {/* <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </Box> */}
+          </IconButton>
+          <IconButton
+            size="large"
+            color="inherit"
+            aria-label="open drawer"
+            sx={{display: { xs: 'none', md: 'flex' }}}
+            onClick={() => dispatch(OpenMenu())}
+          >
+            <MenuIcon/>
+          </IconButton>
+          </Stack>
+
+          <CustomMenu />
         </Toolbar>
       </AppBar>
       {renderMobileMenu}
