@@ -1,0 +1,19 @@
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+/* Trazo del scrollbar */
+::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.3); 
+}
+
+/* Manija del scrollbar */
+::-webkit-scrollbar-thumb {
+    background: #dac996; 
+}
+
+/* Pseudo-clase hover para la manija */
+::-webkit-scrollbar-thumb:hover {
+    background: #25231c; 
+}

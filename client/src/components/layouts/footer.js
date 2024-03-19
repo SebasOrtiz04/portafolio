@@ -14,9 +14,9 @@ const {footer} = footerStyles;
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="white" className={styles.footer__text}>
+    <Typography variant="body2" color="secondary" >
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="secondary" href="https://mui.com/">
         Orca Eventos Sociales
       </Link>{' '}
       {new Date().getFullYear()}
@@ -37,7 +37,10 @@ export default function Footer() {
         <Box component="footer" sx={{...footer,backgroundColor: theme.palette.primary.main}}
         >
           <Container maxWidth="sm">
-            <Typography variant="body1" className={styles.footer__text}>
+            <Typography 
+            variant="body1"
+            color={'secondary'}
+            >
               Orca Eventos Sociales.
             </Typography>
             <Copyright />

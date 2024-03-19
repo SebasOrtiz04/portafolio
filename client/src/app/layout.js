@@ -9,6 +9,7 @@ import Footer from '@/components/layouts/footer';
 import {Provider} from 'react-redux';
 import store from '@/redux/store';
 import { RootAlert } from '@/components/utils/alerts';
+import './global.css'
 
 const {body} =  rootLayoutStyles;
 

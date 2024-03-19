@@ -12,3 +12,9 @@ export const menuTypes = {
     OPEN_MENU : 'OPEN_MENU', 
     CLOSE_MENU : 'CLOSE_MENU', 
 }
+
+export const fullImageTypes = {
+    OPEN_IMAGE : 'OPEN_IMAGE',
+    CLOSE_IMAGE : 'CLOSE_IMAGE',
+    SET_SELECTED_IMAGE : 'SET_SELECTED_IMAGE', 
+}

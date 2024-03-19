@@ -2,7 +2,7 @@
 
 import { Title1 } from '@/components/utils/titles';
 import {Box, Container, Grid, Typography, Card, CardContent, CardActions} from '@mui/material';
-import styles from './stiles.module.css'
+import styles from './styles.module.css'
 import { homeStyles } from '@/app/styles/homeStyles';
 import { GoogleCalendarButton, WhatsAppIconButton } from '@/components/utils/buttons';
 import { useTheme } from '@emotion/react';
