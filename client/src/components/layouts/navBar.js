@@ -17,8 +17,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import MoreIcon from '@mui/icons-material/MoreVert';
-import Image from 'next/image'
+import Button from '@mui/material/Button';
+import Image from 'next/image';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import CustomMenu from './menu';
 import { OpenMenu } from '@/redux/actions/MenuActions';
@@ -26,6 +26,7 @@ import {useDispatch} from 'react-redux';
 import {useTheme} from '@mui/material'
 import Link from 'next/link';
 import styles from './styles.module.css';
+import { useRouter } from 'next/navigation';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -71,12 +72,33 @@ export default function NavBar() {
 
   const dispatch = useDispatch();
   const theme = useTheme();
+  const router = useRouter();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+  const [isScrolled, setIsScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const yPos = window.scrollY;
+      if (yPos > 80) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener on unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -184,7 +206,11 @@ export default function NavBar() {
         <MenuIcon sx={{fontSize:'3rem'}} color='secondary.contrastText' />
       </IconButton>
 
-      <AppBar position="fixed" color='primary' sx={{display:'flex',justifyContent:'center',height:80}}>
+      <AppBar position="fixed" 
+      sx={{ display:'flex',justifyContent:'center',height:80,
+      transition:'all',animationDuration:100,backgroundColor: isScrolled ? theme.palette.primary.light : theme.palette.primary.main
+      }}
+      >
         <Toolbar>
 
 
@@ -201,6 +227,17 @@ export default function NavBar() {
 
           <Typography
             variant="h6"
+            color={'secondary'}
+            noWrap
+            component="div"
+            sx={{ display: { xs: 'flex', sm: 'none' }}}
+          >
+            Orca
+          </Typography>
+
+          <Typography
+            variant="h6"
+            color={'secondary'}
             noWrap
             component="div"
             sx={{ display: { xs: 'none', sm: 'flex' }}}
@@ -224,10 +261,30 @@ export default function NavBar() {
           <Box sx={{ flexGrow: 1 }} />
 
           <Stack direction={'row'} alignItems={'center'}>
+
+
+          <Button 
+          aria-label='navegar a página de contacto' 
+          onClick={()=>router.push('/galery')} 
+          color='secondary'
+          sx={{display:{xs:'none',md:'flex'}}}
+          >
+            Galería
+          </Button>
+
+
+          <Button 
+          aria-label='navegar a página de contacto' 
+          onClick={()=>router.push('/contact')} 
+          color='secondary'
+          sx={{display:{xs:'none',md:'flex'}}}
+          >
+            Contáctanos
+          </Button>
           <IconButton 
             size="large" 
             aria-label="Enlace Facebook" 
-            color="inherit"
+            color="secondary"
             type='href'
             target='_blank'
             href='https://www.facebook.com/profile.php?id=61556546690736'
@@ -236,10 +293,11 @@ export default function NavBar() {
           </IconButton>
           <IconButton
             size="large"
-            color="inherit"
+            color="secondary"
             aria-label="open drawer"
             sx={{display: { xs: 'none', md: 'flex' }}}
             onClick={() => dispatch(OpenMenu())}
+
           >
             <MenuIcon/>
           </IconButton>

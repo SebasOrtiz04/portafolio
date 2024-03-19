@@ -1,5 +1,6 @@
 import HomeIcon from '@mui/icons-material/Home';
 import ImportContactsIcon from '@mui/icons-material/ImportContacts';
+import CameraRollIcon from '@mui/icons-material/CameraRoll';
 
 export const menuList = [
     {
@@ -14,6 +15,11 @@ export const menuList = [
                 label:'Contacto',
                 icon:<ImportContactsIcon/>,
                 link:'/contact'                
+            },
+            {
+                label:'Galería',
+                icon:<CameraRollIcon/>,
+                link:'/galery'                
             },
         ]
     },

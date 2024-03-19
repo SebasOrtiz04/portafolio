@@ -2,9 +2,9 @@
 
 import {ImageList, Container, ImageListItem} from '@mui/material';
 import ImageFullScreen from '@/components/utils/imageFullScreen';
-import { homeImages } from '@/lib/data/initialStates/homeGaleria';
 import {useDispatch}  from 'react-redux';
 import { OpenImage } from '@/redux/actions/FullImageActions';
+import { galeryImages } from '@/lib/data/initialStates/galery';
 
 function srcset(image, size, rows = 1, cols = 1) {
   return {
@@ -15,7 +15,7 @@ function srcset(image, size, rows = 1, cols = 1) {
   };
 }
 
-export default function HomeGaleria() {
+export default function Galery() {
 
   const dispatch = useDispatch();
 
@@ -23,20 +23,20 @@ export default function HomeGaleria() {
     <Container>
 
       <ImageFullScreen
-      list={homeImages}
+      list={galeryImages}
       />        
         <ImageList
         variant="quilted"
         cols={4}
         rowHeight={121}
         >
-        {homeImages.map((item,key) => (
+        {galeryImages.map((item,key) => (
             <ImageListItem key={key} cols={item.cols || 1} rows={item.rows || 1} >
             <img
                 {...srcset(item.img, 121, item.rows, item.cols)}
                 alt={item.title}
                 loading="lazy"
-                onClick={() => dispatch(OpenImage({list:homeImages,selected:key}))}
+                onClick={() => dispatch(OpenImage({list:galeryImages,selected:key}))}
             />
             </ImageListItem>
         ))}

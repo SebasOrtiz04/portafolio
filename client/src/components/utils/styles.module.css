@@ -1,0 +1,28 @@
+.img{
+    width: 100vw;
+    height: auto;
+    
+}
+
+.img__list{
+    width: 100px;
+    height: auto;
+    transition: all .3s ease-in-out;
+}
+
+.img__selected{
+    width: 100px;
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.8); 
+    transition: all .3s ease-in-out;
+}
+
+@media (min-width: 768px){
+
+    .img{
+        width: 50vw;
+        background-size: cover;
+    }
+
+}
