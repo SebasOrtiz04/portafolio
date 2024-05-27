@@ -4,8 +4,8 @@ import {ImageList, Container, ImageListItem} from '@mui/material';
 import ImageFullScreen from '@/components/utils/imageFullScreen';
 import {useDispatch}  from 'react-redux';
 import { OpenImage } from '@/redux/actions/FullImageActions';
-import { galeryImages } from '@/lib/data/initialStates/galery';
 import styles from './styles.module.css'
+import { galeryImages } from '@/lib/data/initialStates/galery';
 
 function srcset(image, size, rows = 1, cols = 1) {
   return {
