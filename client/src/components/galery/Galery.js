@@ -5,6 +5,7 @@ import ImageFullScreen from '@/components/utils/imageFullScreen';
 import {useDispatch}  from 'react-redux';
 import { OpenImage } from '@/redux/actions/FullImageActions';
 import { galeryImages } from '@/lib/data/initialStates/galery';
+import styles from './styles.module.css'
 
 function srcset(image, size, rows = 1, cols = 1) {
   return {
@@ -37,6 +38,7 @@ export default function Galery() {
                 alt={item.title}
                 loading="lazy"
                 onClick={() => dispatch(OpenImage({list:galeryImages,selected:key}))}
+                className={styles.image}
             />
             </ImageListItem>
         ))}

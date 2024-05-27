@@ -1,0 +1,7 @@
+.image{
+    transition: all .3s ease-in-out;
+}
+
+.image:hover{
+    cursor:zoom-in;
+}
