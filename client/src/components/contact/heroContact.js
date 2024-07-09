@@ -12,8 +12,9 @@ import Grid from '@mui/material/Grid'
 import Image from 'next/image'
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import EmailIcon from '@mui/icons-material/Email';
-import { GoogleCalendarButton, WhatsAppTextButton } from '../utils/buttons'
 import { heroContactStyles } from '@/app/styles/contactStyles'
+import { GoogleCalendarButton, WhatsAppTextButton } from '../utils/buttons'
+
 
 const {gridChild} = heroContactStyles;
 
@@ -27,15 +28,11 @@ export default function HeroContact() {
             icon:<PhoneIphoneIcon/>
         },
         {
-            label:'sebastianortizcastro04@gmail.com',
+            label:'ventas@orcaeventos.com',
             icon:<EmailIcon/>,
         }
     ]
 
-    const buttons = [
-        <GoogleCalendarButton/>,
-        <WhatsAppTextButton color='primary'/>
-    ]
 
   return (
     <Box sx={{overflow:'hidden'}}>

@@ -6,15 +6,8 @@ import {Container, Grid} from '@mui/material'
 export default function HomeContact() {
   return (
     <Container sx={{paddingY:5}}>
-        <Title1 title='Déjanos un mensaje'/>
-        <Grid container spacing={2}>
-            <Grid item xs={12} md={6}>
-                <FormEmail/>
-            </Grid>
-            <Grid item xs={12} md={6} sx={{display:'flex',alignItems:'center',justifyContent:'center'}}>
-                <GoogleMaps/>
-            </Grid>
-        </Grid>
+        <Title1 title='Visítanos'/>
+        <GoogleMaps/>
     </Container>
   )
 }
