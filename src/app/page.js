@@ -8,7 +8,7 @@ import HomeGaleria from '@/components/home/homeGaleria/homeGaleria';
 
 export const metadata = {
   title: "Orca Eventos Sociales",
-  description: "Sitio web de del saón de eventos sociales, fiestas de cumpleaños, fiesta de cumpleaños, XV años, bodas, banquetes",
+  description: "Sitio web de Orca salón jardín, eventos sociales, fiestas de cumpleaños, XV años, bodas, banquetes, taquizas, carnitas, mixiotes, inflables, renta de salón, renta de eventos",
 };
 
 export default function Home() {
