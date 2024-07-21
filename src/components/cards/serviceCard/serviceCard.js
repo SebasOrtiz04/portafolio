@@ -6,17 +6,22 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { WhatsAppIconButton } from '@/components/utils/buttons';
+import { Box } from '@mui/material';
+import styles from './styles.module.css'
 
 export default function ServicesCard({serviceTitle,serviceDescription,imagePath}) {
   return (
-    <Card sx={{ maxWidth: 270 }}>
+    <Card sx={{ margin: 3 }}>
       <CardMedia
         component="img"
         alt={serviceTitle}
         height="140"
         image={imagePath}
       />
-      <CardContent sx={{height:'10rem'}}>
+      <CardContent sx={{position:'relative',height:'10rem',width:'90%',overflowY:'hidden',overflowX:'hidden'}}>
+        
+        <Box className={styles.mask}/>
+        
         <Typography gutterBottom variant="h5" component="div">
           {serviceTitle}
         </Typography>

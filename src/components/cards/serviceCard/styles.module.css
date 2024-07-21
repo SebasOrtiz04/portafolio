@@ -1,0 +1,10 @@
+.mask{
+    background-image: linear-gradient(to bottom, transparent 5% , white 95%);
+    background-image: -webkit-linear-gradient(to bottom, transparent 5% , white 95%);
+    background-image: -moz-linear-gradient(to bottom, transparent 5% , white 95%);
+    background-image: -o-linear-gradient(to bottom, transparent 5% , white 95%);
+    position: absolute;
+    left:0;
+    height:100%;
+    width:100%; 
+}

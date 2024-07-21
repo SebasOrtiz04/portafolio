@@ -6,8 +6,8 @@ import {
 
 export default function PageGalery() {
   return (
-    <Container>
-        <Title1 title='Galería'/>
+    <Container sx={{marginY:15}}>
+      <Title1 title='Galería'/>
       <Galery/>
     </Container>
   )

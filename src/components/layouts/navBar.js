@@ -227,22 +227,22 @@ export default function NavBar() {
 
           <Typography
             variant="h6"
-            color={'secondary'}
+            color={'secondary.ligth'}
             noWrap
             component="div"
-            sx={{ display: { xs: 'flex', sm: 'none' }}}
+            sx={{ display: { xs: 'flex', sm: 'none' },color:theme.palette.secondary.light}}
           >
             Orca
           </Typography>
 
           <Typography
             variant="h6"
-            color={'secondary'}
+            color={'secondary.ligth'}
             noWrap
             component="div"
-            sx={{ display: { xs: 'none', sm: 'flex' }}}
+            sx={{ display: { xs: 'none', sm: 'flex' },color:theme.palette.secondary.light}}
           >
-            Orca Eventos Sociales
+            Salón Jardín Orca
           </Typography>
           </Stack>
           </Link>

@@ -18,3 +18,8 @@ export const fullImageTypes = {
     CLOSE_IMAGE : 'CLOSE_IMAGE',
     SET_SELECTED_IMAGE : 'SET_SELECTED_IMAGE', 
 }
+
+export const socialEventTypes = {
+    GET_ALL_SOCIALEVENTS : 'GET_ALL_SOCIALEVENTS',
+    GET_ALL_SOCIALEVENTS_STATUS : 'GET_ALL_SOCIALEVENTS_STATUS',
+}

@@ -5,13 +5,13 @@ export const servicesInitialState = [
         imagePath:'/img/Carrucel/salon_loche_luz_intensa.jpg'
     },
     {
-        serviceTitle:"Renta de loza.",
-        serviceDescription:`Si tienes otro espacio reservado paraz tu evento podemos rentarte loza, platos, vasos, cubiertos y más...`,
-        imagePath:'/img/Carrucel/loza_mantel_plateado.jpg'
-    },
-    {
         serviceTitle:"Banquete 3 tiempos.",
         serviceDescription:`También podemos encargarnos de tus alimentos si contratas el salón con nosotros, tenemos un amplio menú, degustación y más.`,
         imagePath:'/img/Carrucel/salon_loche_luz_intensa.jpg'
+    },
+    {
+        serviceTitle:"Renta de loza.",
+        serviceDescription:`Si tienes otro espacio reservado paraz tu evento podemos rentarte loza, platos, vasos, cubiertos y más...`,
+        imagePath:'/img/Carrucel/loza_mantel_plateado.jpg'
     },
 ];

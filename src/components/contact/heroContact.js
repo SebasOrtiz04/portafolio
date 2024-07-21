@@ -42,8 +42,8 @@ export default function HeroContact() {
       
       <Stack alignItems={'center'} sx={{width:'100%',background:theme.palette.primary.main,}}>
         <Image
-            srcSet='/img/Logos/logoC.png'
-            src='/img/Logos/logoC.png'
+            srcSet='/img/Logos/orcaSalon_sin_fondo.png'
+            src='/img/Logos/orcaSalon_sin_fondo.png'
             alt='Logo Orca Eventos Sociales'
             priority
             width={500}

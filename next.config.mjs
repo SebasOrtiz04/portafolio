@@ -6,7 +6,7 @@ const nextConfig = {
     // domains:['aca el dominio de la api']
   },
   env: {
-    NEXT_URL_BASE_API: 'https://raspy-dogs-production.up.railway.app/api/',
+    NEXT_URL_BASE_API: process.env.NEXT_URL_BASE_API,
   },
 };
 

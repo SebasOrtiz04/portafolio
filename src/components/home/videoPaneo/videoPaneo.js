@@ -14,7 +14,7 @@ export function VideoPaneo() {
     const theme = useTheme();
 
     return (
-        <Box sx={{...container,backgroundColor: theme.palette.secondary.main}}>
+        <Box sx={{...container,backgroundColor: theme.palette.secondary.light}}>
 
             <Container>
             <Title1 title='Conoce nuestras instalaciones.'/>
