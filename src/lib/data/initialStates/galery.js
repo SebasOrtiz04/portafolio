@@ -52,8 +52,8 @@ export const galeryImages = [
       title: 'Boda civil en el jardín.',
     },
     {
-      img: '/img/Galery/4.jpg',
-      title: 'Fiesta infantil.',
+      img: '/img/Galery/6.jpg',
+      title: 'Mesa matelería plateada.',
       cols: 2,
     },
     {
@@ -62,13 +62,13 @@ export const galeryImages = [
       cols: 2,
     },
     {
-     img: '/img/Galery/6.jpg',  
-      title: 'Mesa matelería plateada.',
+     img: '/img/Galery/7.jpg',  
+      title: 'Fiesta infantil.',
       rows: 2,
       cols: 2,
     },
     {
-     img: '/img/Galery/7.jpg',
+     img: '/img/Galery/4.jpg',
       title: 'Mesa matelería rosa.',
     },
     {
@@ -76,41 +76,22 @@ export const galeryImages = [
       title: 'Salón vacío iluminado.',
     },
     {
-      img: '/img/Galery/9.jpg',
-      title: 'Conferencia.',
+      img: '/img/Galery/13.jpg',
+      title: 'Salón mantelería rojo + azul militar 1.',
       rows: 2,
       cols: 2,
     },
     {
-      img: '/img/Galery/10.jpg',
-      title: 'Conferencia 2.',
+      img: '/img/Galery/12.jpg',
+      title: 'Salón mantelería rojo + azul militar 2.',
     },
     {
-      img: '/img/Galery/11.jpg',
-      title: 'Conferencia 3.',
+      img: '/img/Galery/14.jpg',
+      title: 'Salón mantelería rojo + azul militar 3.',
     },
     {
       img: '/img/Galery/12.jpg',
       title: 'Salón mantelería rojo + azul militar.',
       cols: 2,
-    },
-    {
-      img: '/img/Galery/13.jpg',
-      title: 'Mesa con loza montada, matelería plateada.',
-      cols: 2,
-    },
-    {
-     img: '/img/Galery/14.jpg',  
-      title: 'Salón mantelería rojo + azul militar 2.',
-      rows: 2,
-      cols: 2,
-    },
-    {
-     img: '/img/Galery/15.jpg',
-      title: 'Salón mantelería rojo + azul militar 3.',
-    },
-    {
-     img: '/img/Galery/16.jpg',
-      title: 'Salón mantelería rojo + azul militar 4.',
-    },
+    }
   ];

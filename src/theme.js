@@ -6,15 +6,15 @@ const theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      light: 'rgba(0,0,0,0.8)',
-      main: '#000',
+      light: 'rgba(21,31,40,0.8)',
+      main: '#151F28',
       dark: '#607168 ',
       contrastText: '#fff',
     },
     secondary: {
-      light: '#ff7961',
-      main: '#dac996',
-      dark: '#25231c',
+      light: '#f7eeda',
+      main: '#BC9C22',
+      dark: '#221d0e',
       contrastText: '#454032',
     },
     blackMask:{

@@ -42,6 +42,7 @@ export default function CustomMenu() {
     >
         {menuList.map(({section_name,list}, index) => (
           <List
+          key={index}
           subheader={
             <ListSubheader component="div">
               {section_name}
@@ -50,7 +51,7 @@ export default function CustomMenu() {
           >
             {
               list.map(({label,icon,link},key)=>(
-                <ListItem key={index} disablePadding>
+                <ListItem key={`${index}${key}`} disablePadding>
                 {/* <Link href={link} className={styles.a__menu}> */}
                   <ListItemButton onClick={() => router.push(link)}>
                     <ListItemIcon>
