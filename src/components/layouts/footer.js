@@ -13,10 +13,11 @@ const {flexcol} = rootLayoutStyles;
 const {footer} = footerStyles;
 
 function Copyright() {
+  const theme = useTheme();
   return (
-    <Typography variant="body2" color="secondary" >
+    <Typography variant="body2" color="secondary" sx={{color:theme.palette.secondary.light}} >
       {'Copyright © '}
-      <Link color="secondary" href="https://mui.com/">
+      <Link color="secondary" href="https://mui.com/" sx={{color:theme.palette.secondary.light}} >
         Orca Eventos Sociales
       </Link>{' '}
       {new Date().getFullYear()}
@@ -40,6 +41,7 @@ export default function Footer() {
             <Typography 
             variant="body1"
             color={'secondary'}
+            sx={{color:theme.palette.secondary.light}}
             >
               Orca Eventos Sociales.
             </Typography>

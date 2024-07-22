@@ -267,7 +267,7 @@ export default function NavBar() {
           aria-label='navegar a página de contacto' 
           onClick={()=>router.push('/galery')} 
           color='secondary'
-          sx={{display:{xs:'none',md:'flex'}}}
+          sx={{display:{xs:'none',md:'flex',color:theme.palette.secondary.light}}}
           >
             Galería
           </Button>
@@ -277,7 +277,7 @@ export default function NavBar() {
           aria-label='navegar a página de contacto' 
           onClick={()=>router.push('/contact')} 
           color='secondary'
-          sx={{display:{xs:'none',md:'flex'}}}
+          sx={{display:{xs:'none',md:'flex'},color:theme.palette.secondary.light}}
           >
             Contáctanos
           </Button>
@@ -288,6 +288,7 @@ export default function NavBar() {
             type='href'
             target='_blank'
             href='https://www.facebook.com/profile.php?id=61556546690736'
+            sx={{color:theme.palette.secondary.light}}
             >
                 <FacebookIcon />
           </IconButton>
@@ -295,7 +296,7 @@ export default function NavBar() {
             size="large"
             color="secondary"
             aria-label="open drawer"
-            sx={{display: { xs: 'none', md: 'flex' }}}
+            sx={{display: { xs: 'none', md: 'flex' },color:theme.palette.secondary.light}}
             onClick={() => dispatch(OpenMenu())}
 
           >
