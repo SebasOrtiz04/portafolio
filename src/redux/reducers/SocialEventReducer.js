@@ -1,12 +1,18 @@
 import { socialEventTypes } from "../types"
 
  const InitialState = {
+    homeSocialEvents:[],
     allSocialEvents:[],
+    socialEventById:{},
     isLoading:{
-        getAll:false
+        getAll:false,
+        getHome:false,
+        getById:false,
     },
     status:{
-        getAll:-1
+        getAll:-1,
+        getHome:false,
+        getById:false,
     }
  }
 

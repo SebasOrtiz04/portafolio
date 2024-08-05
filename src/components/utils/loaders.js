@@ -12,7 +12,7 @@ export const  ServicesLoaderCard = () => (
     <Card sx={{ margin: 3 }}>
       <Skeleton variant='rectangular' width={'100%'} height={140}/>
       <CardContent 
-      sx={{position:'relative',height:'10rem',width:'90%',overflowY:'hidden',overflowX:'hidden'}}>
+      sx={{position:'relative',height:'6rem',width:'90%',overflowY:'hidden',overflowX:'hidden'}}>
         
         <Box className={styles.mask}/>
         

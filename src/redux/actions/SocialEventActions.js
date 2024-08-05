@@ -12,7 +12,27 @@ export const SetGetAllSocialEventsStatus = (status = -1, loading = false) => ({
     try {
       const response = await api.get('/socialevents');
       const {data,status} = response
-      console.log(data);
+      // Puedes despachar una acción con los datos recibidos si es necesario
+
+      if(status !== 200) return
+      dispatch({
+        type: socialEventTypes.GET_ALL_SOCIALEVENTS,
+        payload:data,
+      });
+    } catch (error) {
+      console.error(error);
+      dispatch(SetGetAllSocialEventsStatus(500, false));
+    }
+  };
+  
+  export const GetSocialEventsById = ({
+    categoryId,
+    serviceId
+  }) => async dispatch => {
+    dispatch(SetGetAllSocialEventsStatus(-1, true));
+    try {
+      const response = await api.get(`/categories/${categoryId}/eventos/${serviceId}`);
+      const {data,status} = response
       // Puedes despachar una acción con los datos recibidos si es necesario
 
       if(status !== 200) return

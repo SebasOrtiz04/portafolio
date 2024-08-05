@@ -6,8 +6,8 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import styles from './styles.module.css'
 import { useTheme } from '@mui/material/styles';
-import { rootLayoutStyles } from '@/app/styles/mainStyles';
 import { footerStyles } from '@/app/styles/layoutStyles';
+import { rootLayoutStyles } from '@/app/styles/mainStyles';
 
 const {flexcol} = rootLayoutStyles;
 const {footer} = footerStyles;

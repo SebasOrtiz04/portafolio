@@ -34,18 +34,19 @@ export default function Services() {
         {
 
             isLoading?.getAll || !allSocialEvents.length?
-            [...Array(3)].map((_,key) =>(
-              <Grid item xs={12} sm={6} md={4} key={key}>
+            [...Array(4)].map((_,key) =>(
+              <Grid item xs={12} sm={6} key={key}>
                 <ServicesLoaderCard />
               </Grid>
             )) :
-            allSocialEvents.map(({eventName,eventDescription},key) =>(
-              <Grid item xs={12} sm={6} md={4} >
+            allSocialEvents.map(({eventName,eventDescription,_id,category},key) =>(
+              <Grid item key={key} xs={12} sm={6} >
                 <ServicesCard
-                key={key}
                 serviceTitle={eventName}
                 serviceDescription={eventDescription}
                 imagePath={servicesInitialState[key].imagePath}
+                _id={_id}
+                category={category}
                 />
               </Grid>
             ))

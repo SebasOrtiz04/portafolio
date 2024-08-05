@@ -8,8 +8,17 @@ import Typography from '@mui/material/Typography';
 import { WhatsAppIconButton } from '@/components/utils/buttons';
 import { Box } from '@mui/material';
 import styles from './styles.module.css'
+import { useRouter } from 'next/navigation';
 
-export default function ServicesCard({serviceTitle,serviceDescription,imagePath}) {
+export default function ServicesCard({
+  serviceTitle,
+  serviceDescription,
+  imagePath,
+  _id,
+  category
+}) {
+
+  const navigate = useRouter()
   return (
     <Card sx={{ margin: 3 }}>
       <CardMedia
@@ -18,7 +27,7 @@ export default function ServicesCard({serviceTitle,serviceDescription,imagePath}
         height="140"
         image={imagePath}
       />
-      <CardContent sx={{position:'relative',height:'10rem',width:'90%',overflowY:'hidden',overflowX:'hidden'}}>
+      <CardContent sx={{position:'relative',height:'6rem',width:'90%',overflowY:'hidden',overflowX:'hidden'}}>
         
         <Box className={styles.mask}/>
         
@@ -29,8 +38,10 @@ export default function ServicesCard({serviceTitle,serviceDescription,imagePath}
           {serviceDescription}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Saber más del servicio</Button>
+      <CardActions sx={{display:'flex'}}>
+        <Button size="small" fullWidth onClick={() => navigate.push(`/service/${category?._id}/${_id}`)}>
+          Saber más del servicio
+        </Button>
         <WhatsAppIconButton/>
       </CardActions>
     </Card>

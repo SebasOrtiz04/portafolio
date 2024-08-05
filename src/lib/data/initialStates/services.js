@@ -14,4 +14,9 @@ export const servicesInitialState = [
         serviceDescription:`Si tienes otro espacio reservado paraz tu evento podemos rentarte loza, platos, vasos, cubiertos y más...`,
         imagePath:'/img/Carrucel/loza_mantel_plateado.jpg'
     },
+    {
+        serviceTitle:"Renta de loza.",
+        serviceDescription:`Si tienes otro espacio reservado paraz tu evento podemos rentarte loza, platos, vasos, cubiertos y más...`,
+        imagePath:'/img/Carrucel/loza_mantel_plateado.jpg'
+    },
 ];
