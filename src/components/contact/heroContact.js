@@ -13,7 +13,7 @@ import Image from 'next/image'
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import EmailIcon from '@mui/icons-material/Email';
 import { GoogleCalendarButton, WhatsAppTextButton } from '../utils/buttons'
-import { heroContactStyles } from '@/app/service/[categoryId]/[serviceId]/styles/contactStyles'
+import { heroContactStyles } from '@/app/styles/contactStyles'
 
 const {gridChild} = heroContactStyles;
 
