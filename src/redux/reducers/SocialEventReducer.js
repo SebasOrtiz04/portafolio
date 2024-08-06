@@ -1,12 +1,18 @@
 import { socialEventTypes } from "../types"
 
  const InitialState = {
+    homeSocialEvents:[],
     allSocialEvents:[],
+    socialEventById:{},
     isLoading:{
-        getAll:false
+        getAll:false,
+        getHome:false,
+        getById:false,
     },
     status:{
-        getAll:-1
+        getAll:-1,
+        getHome:false,
+        getById:false,
     }
  }
 
@@ -35,6 +41,56 @@ import { socialEventTypes } from "../types"
                 status:{
                     ...state.status,
                     getAll:action.payload.status
+                }
+            }
+        case socialEventTypes.GET_HOME_SOCIALEVENTS:
+            return{
+                ...state,
+                homeSocialEvents: action.payload,
+                isLoading :{
+                    ...state.isLoading,
+                    getHome:false
+                },
+                status:{
+                    ...state.status,
+                    getHome:200
+                }
+            }
+        case socialEventTypes.GET_HOME_SOCIALEVENTS_STATUS:
+            return{
+                ...state,
+                isLoading :{
+                    ...state.isLoading,
+                    getHome:action.payload.loading
+                },
+                status:{
+                    ...state.status,
+                    getHome:action.payload.status
+                }
+            }
+        case socialEventTypes.GET_SOCIALEVENT_BY_ID:
+            return{
+                ...state,
+                socialEventById: action.payload,
+                isLoading :{
+                    ...state.isLoading,
+                    getById:false
+                },
+                status:{
+                    ...state.status,
+                    getById:200
+                }
+            }
+        case socialEventTypes.GET_SOCIALEVENT_BY_ID_STATUS:
+            return{
+                ...state,
+                isLoading :{
+                    ...state.isLoading,
+                    getById:action.payload.loading
+                },
+                status:{
+                    ...state.status,
+                    getById:action.payload.status
                 }
             }
         default:

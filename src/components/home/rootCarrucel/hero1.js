@@ -1,4 +1,4 @@
-import { carrucelStyles } from "@/app/styles/carrucleStyles";
+import { carrucelStyles } from '@/app/styles/carrucleStyles';
 import { Container, Stack, Typography } from "@mui/material";
 import styles from './styles.module.css'
 import { WhatsAppTextButton } from "@/components/utils/buttons";
