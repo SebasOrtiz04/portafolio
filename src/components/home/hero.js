@@ -7,7 +7,7 @@ import TypewriterEffect from '../utils/typeWritinfefect';
 import { heroTypographyText } from '@/lib/data/initialStates';
 import { headerStyles } from '@/app/styles/homeStyles';
 
-const {subTitleStyle,gridContainerStyle,avatarGridStyle,textStyle,titleStyle,avatarStyle} = headerStyles;
+const {subTitleStyle,gridContainerStyle,avatarGridStyle,typographyText,textStyle,titleStyle,avatarStyle} = headerStyles;
 export default function Hero() {
   
     const theme = useTheme();
@@ -44,7 +44,7 @@ export default function Hero() {
             </Grid>
             <Grid item xs={12} md={6} sx={textStyle}>
                 <TypewriterEffect
-                variant='lead' customStyles={{fontSize:36,color:theme.palette.secondary.light}} strings={heroTypographyText}/>
+                variant='lead' customStyles={{...typographyText,color:theme.palette.secondary.light}} strings={heroTypographyText}/>
             </Grid>
         </Grid>
       </Container>
