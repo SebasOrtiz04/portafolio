@@ -1,0 +1,56 @@
+.ball1 {
+    width: 20rem;
+    height: 20rem;
+    top: 50px;
+    left: -200px;
+    opacity: 0.5; /* Aumenta la opacidad general */
+    position: absolute;
+    border-radius: 10% 50% 45% 50%;
+    animation: morphBall 12s infinite alternate;
+    filter: blur(60px); /* Aplicar desenfoque */
+    background-image: radial-gradient(rgba(43, 116, 96, 0.1), rgba(43, 116, 96, 0.3), rgba(231, 255, 246, 0.5));
+}
+.ball2 {
+    width: 50rem;
+    height: 25rem;
+    bottom: 25px;
+    right: -600px;
+    opacity: 0.5; /* Aumenta la opacidad general */
+    background-image: radial-gradient(rgba(21, 31, 40, 0.1), rgba(90, 97, 104, 0.3), rgba(211, 213, 215, 0.5));
+    position: absolute;
+    border-radius: 10% 50% 45% 50%;
+    animation: morphBall 10s infinite alternate;
+    filter: blur(60px); /* Aplicar desenfoque */
+}
+
+@media (min-width:768px) {
+    .ball1{
+        width: 50rem;
+        height: 50rem;
+    }
+    .ball2{
+        width: 50rem;
+        height: 50rem;
+    }
+}
+
+@keyframes morphBall {
+    0% {
+        border-radius: 30% 50% 30% 50%;
+    }
+    20% {
+        border-radius: 30% 45% 35% 50%;
+    }
+    40% {
+        border-radius: 35% 40% 40% 45%;
+    }
+    60% {
+        border-radius: 40% 35% 45% 40%;
+    }
+    80% {
+        border-radius: 45% 30% 50% 35%;
+    }
+    100% {
+        border-radius: 50% 30% 50% 30%;
+    }
+}

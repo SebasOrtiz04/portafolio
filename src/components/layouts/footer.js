@@ -8,24 +8,9 @@ import styles from './styles.module.css'
 import { useTheme } from '@mui/material/styles';
 import { footerStyles } from '@/app/styles/layoutStyles';
 import { rootLayoutStyles } from '@/app/styles/mainStyles';
-
+import FavoriteIcon from '@mui/icons-material/Favorite';
 const {flexcol} = rootLayoutStyles;
 const {footer} = footerStyles;
-
-function Copyright() {
-  const theme = useTheme();
-  return (
-    <Typography variant="body2" color="secondary" sx={{color:theme.palette.secondary.light}} >
-      {'Copyright © '}
-      <Link color="secondary" href="https://mui.com/" sx={{color:theme.palette.secondary.light}} >
-        Orca Eventos Sociales
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
 
 export default function Footer() {
 
@@ -35,17 +20,17 @@ export default function Footer() {
 
       <Box  sx={flexcol}>
 
-        <Box component="footer" sx={{...footer,backgroundColor: theme.palette.primary.main}}
+        <Box component="footer" sx={{...footer,backgroundColor: theme.palette.blackMask.dark}}
         >
+          
           <Container maxWidth="sm">
             <Typography 
             variant="body1"
             color={'secondary'}
-            sx={{color:theme.palette.secondary.light}}
+            sx={{color:theme.palette.secondary.light,display:'flex',gap:1}}
             >
-              Orca Eventos Sociales.
+              Made with <FavoriteIcon color='error'/> by Juan Sebastian Ortiz Castro
             </Typography>
-            <Copyright />
           </Container>
         </Box>
       </Box>
