@@ -1,6 +1,8 @@
 import React from 'react'
 import {Box} from '@mui/material'
 import Hero from '@/components/home/hero';
+import Projects from '@/components/home/projects';
+import Tecnologies from '@/components/home/tecnologies';
 
 // export const metadata = {
 //   title: {
@@ -23,6 +25,8 @@ export default function Home() {
   return (
     <Box sx={{maxWidth:'100vw',overflowX:'hidden'}}>
       <Hero/>
+      <Projects/>
+      <Tecnologies/>
     </Box>
   )
 }

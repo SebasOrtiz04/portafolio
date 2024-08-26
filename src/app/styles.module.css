@@ -23,19 +23,6 @@
     filter: blur(60px); /* Aplicar desenfoque */
 }
 
-.avatar {
-    height: 150px;
-    width: 150px;
-}
-
-@media (min-width:600px) {
-    .avatar {
-        height: 300px;
-        width: 300px;
-    }
-    
-}
-
 @media (min-width:768px) {
     .ball1{
         width: 50rem;

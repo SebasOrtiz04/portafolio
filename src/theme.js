@@ -1,6 +1,7 @@
 'use client';
 
 import { createTheme } from '@mui/material/styles';
+import { light } from '@mui/material/styles/createPalette';
 
 const theme = createTheme({
   palette: {
@@ -18,7 +19,8 @@ const theme = createTheme({
       contrastText: '#162923',
     },
     blackMask:{
-      main: 'rgba(0,0,0,0.5)',
+      light: 'rgba(10,10,10,0.3)',
+      main: 'rgba(10,10,10,0.6)',
       dark:'#0a0a0a',
       contrastText: 'rgb(111,111,111)'
     },
