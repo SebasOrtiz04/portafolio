@@ -16,6 +16,8 @@ import styles from './styles.module.css';
 
 import { useEffect, useState } from 'react';
 import { socialLinks } from '@/lib/data/initialStates';
+import { WhatsAppIconButton } from '../utils/buttons';
+import Image from 'next/image';
 
 export default function NavBar() {
 
@@ -57,19 +59,27 @@ export default function NavBar() {
 
       <AppBar position="fixed" 
         sx={{ display:'flex',justifyContent:'center',height:80,
-        transition:'all',animationDuration:100,backgroundColor: isScrolled ? theme.palette.blackMask.dark : theme.palette.blackMask.dark
+        transition:'all',animationDuration:100,backgroundColor: isScrolled ? theme.palette.blackMask.light : theme.palette.blackMask.light
         }}
       >
         <Container>
           <Toolbar>
             <Link href='/' className={styles.a}>
               <Stack direction='row' gap={2} alignItems='center'>
-                <Avatar sx={{backgroundColor:theme.palette.secondary.light,color:theme.palette.secondary.contrastText}}>
-                  SO
-                </Avatar>
+                <Avatar sx={{height:40,width:40}} >
+                      <Image
+                          src={'/img/Profile/profile.jpg'}
+                          height={40}
+                          width={40}
+                          alt='Foto de Perfil'
+                          aria-label='foto de perfil'
+                          className={styles.avatar}
+                          // sx={{height:{xs:100,sm:300},width:{xs:100,sm:300}}}
+                      />
+                    </Avatar>
                 <Typography
                   variant="h6"
-                  color={'secondary.ligth'}
+                  color={'secondary'}
                   noWrap
                   component="div"
                   sx={{ display: { xs: 'flex', sm: 'none' },color:theme.palette.secondary.light}}
@@ -79,7 +89,7 @@ export default function NavBar() {
 
                 <Typography
                   variant="h6"
-                  color={'secondary.ligth'}
+                  color={'secondary'}
                   noWrap
                   component="div"
                   sx={{ display: { xs: 'none', sm: 'flex' },color:theme.palette.secondary.light}}
@@ -92,6 +102,7 @@ export default function NavBar() {
             <Box sx={{ flexGrow: 1 }} />
 
             <Stack direction={'row'} alignItems={'center'}>
+              <WhatsAppIconButton/>
               {
                 socialLinks.map(({ariaLabel,icon,href},key)=>(
                   <IconButton 

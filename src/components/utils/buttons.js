@@ -31,7 +31,7 @@ export const HomeButton = () =>{
 export const WhatsAppIconButton = () =>{
     return(
         <IconButton size="large" aria-label='contactanos por whatsapp' href={whatsAppHRef} target='_blank'>
-            <WhatsAppIcon  color="success" />
+            <WhatsAppIcon  color="secondary" />
         </IconButton>
     )
 }

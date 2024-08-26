@@ -10,7 +10,7 @@ import ListItemText from '@mui/material/ListItemText';
 import ListSubheader from '@mui/material/ListSubheader';
 import {useSelector, useDispatch} from 'react-redux'
 import { CloseMenu, OpenMenu } from '@/redux/actions/MenuActions';
-import { menuList } from '@/lib/data/initialStates/index';
+import { menuList } from '@/lib/data/initialStates';
 import { useRouter, usePathname  } from 'next/navigation';
 import {useTheme} from '@mui/material';
 

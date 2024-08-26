@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         <header>
           <NavBar/>
         </header>
-        <main style={{marginTop:80}}>
+        <main >
           <AppRouterCacheProvider>
             
               {children}
