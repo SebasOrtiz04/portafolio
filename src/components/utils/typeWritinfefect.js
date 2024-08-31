@@ -22,19 +22,9 @@ const TypewriterEffect = ({strings,customStyles,variant='h4'}) => {
       <ReactTyped
         backSpeed={50}
         style={textStyles}
-        onBegin={function noRefCheck(){}}
-        onComplete={function noRefCheck(){}}
-        onDestroy={function noRefCheck(){}}
-        onLastStringBackspaced={function noRefCheck(){}}
-        onReset={function noRefCheck(){}}
-        onStart={function noRefCheck(){}}
-        onStop={function noRefCheck(){}}
-        onStringTyped={function noRefCheck(){}}
-        onTypingPaused={function noRefCheck(){}}
-        onTypingResumed={function noRefCheck(){}}
+        loop
         strings={strings}
         typeSpeed={50}
-        typedRef={function noRefCheck(){}}
       />
     </Typography>
   );

@@ -53,7 +53,7 @@ export default function Projects() {
                     </Typography>
                 </Grow>
 
-                <Stack width={'100%'} height={'100%'} direction={'row'} alignItems={'center'} justifyContent={'space-evenly'}>
+                <Stack width={'100%'} height={500} direction={'row'} alignItems={'center'} justifyContent={'space-evenly'}>
                     {
                         skills.map(({label,icon},key)=>(
                             <Zoom
