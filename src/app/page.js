@@ -14,9 +14,10 @@ import Tecnologies from '@/components/home/tecnologies';
 //     en: "Explore the professional portfolio of Sebastian Ortiz, an electronics engineer specializing in communications and an expert FullStack developer with a proven track record in developing innovative technological solutions. Discover projects that blend technical expertise with creativity."
 //   },
 // };
+
 export const metadata = {
-  title: "Sebastian Ortiz | Ingeniero en Electrónica y Comunicaciones | Programador FullStack Experto",
-  description: "Sitio web de Orca salón jardín, eventos sociales, fiestas de cumpleaños, XV años, bodas, banquetes, taquizas, carnitas, mixiotes, inflables, renta de salón, renta de eventos",
+  title: "FullStack Developer & Electronics Engineer | Sebastian Ortiz",
+  description: "Ingeniero en Electrónica y Comunicaciones con sólida experiencia como Programador FullStack. Sebastian Ortiz combina creatividad, precisión técnica y pasión por la tecnología para desarrollar soluciones innovadoras y robustas en diversas plataformas. Explora proyectos que van desde aplicaciones web avanzadas hasta integraciones de hardware, destacando por su enfoque en calidad y eficiencia.",
 };
 
 

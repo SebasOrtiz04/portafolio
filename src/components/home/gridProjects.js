@@ -19,7 +19,7 @@ export default function GridProjects() {
         threshold:0.2
     })
   return (
-        <Grid ref={ref} container sx={{minWidth:5,minHeight:5}}  >
+        <Grid ref={ref} container sx={{marginY:10}}  >
                 {
                     projects.map(({srcImg,altImg,title,role,year,url,registers,owner,tecnologies},key)=>(
                         
