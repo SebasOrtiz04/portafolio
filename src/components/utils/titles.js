@@ -1,7 +1,6 @@
 'use client'
 
 import {Typography, Divider, useTheme, Zoom} from '@mui/material'
-import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 export const Title1 = ({title}) =>{
@@ -9,7 +8,8 @@ export const Title1 = ({title}) =>{
     const theme = useTheme();
 
     const {ref, inView} = useInView({
-        threshold: 0.3
+        threshold: 0.3,
+        triggerOnce:true
     });
 
     return(
@@ -27,7 +27,8 @@ export const Title2 = ({title,}) =>{
     const theme = useTheme();
 
     const {ref, inView} = useInView({
-        threshold: 0.3
+        threshold: 0.3,
+        triggerOnce:true
     });
 
     return(

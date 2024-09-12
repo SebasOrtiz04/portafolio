@@ -14,7 +14,8 @@ export default function Hero() {
     const theme = useTheme();
 
     const {ref, inView} = useInView({
-        threshold:0.3
+                threshold:0.3,
+        triggerOnce:true,
     })
 
     return (
@@ -25,9 +26,9 @@ export default function Hero() {
                 <Grow timeout={400} in={inView}>
                     <Avatar sx={avatarStyle}>
                         <Image
-                            src={'/img/Profile/profile.jpg'}
-                            height={300}
-                            width={200}
+                            src={'/img/Profile/profile.png'}
+                            height={500}
+                            width={500}
                             alt='Foto de Perfil'
                             aria-label='foto de perfil'
                             className={styles.avatar}
@@ -47,9 +48,8 @@ export default function Hero() {
                 </Zoom>
                 <Zoom in={inView} timeout={700}>
                 <Button
-                    fullWidth
                     variant="outlined"
-                    color="primary"
+                    color="secondary"
                     component="a"
                     href="/docs/CV Juan Sebastian Ortiz Castro.pdf" // Ruta al archivo estático
                     download="CV Juan Sebastian Ortiz Castro.pdf" // Nombre con el que se descargará el archivo

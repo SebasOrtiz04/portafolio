@@ -53,7 +53,7 @@ export const menuList = [
 export const socialLinks = [
     {
         ariaLabel:"Enlace Linkedin",
-        href:'https://www.linkedin.com/public-profile/settings',
+        href:'http://www.linkedin.com/in/juansebastianortizcastro',
         icon:<LinkedInIcon color='secondary'/>
     },
     {
@@ -139,7 +139,7 @@ export const projects = [
             'mongoDB'
         ],
         registers:[],
-        url:'https://orcaeventos.com/',
+        url:'https://salonorca.com/'
     },
     {
         srcImg:'/img/Proyects/Buho/dashboard.png',
