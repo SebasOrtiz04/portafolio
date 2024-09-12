@@ -16,7 +16,8 @@ export default function GridProjects() {
     const textColor = theme.palette.secondary.light;
 
     const {ref, inView} = useInView({
-        threshold:0.2
+        threshold:0.2,
+        triggerOnce:true
     })
   return (
         <Grid ref={ref} container sx={{marginY:10}}  >

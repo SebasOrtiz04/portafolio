@@ -68,9 +68,9 @@ export default function NavBar() {
               <Stack direction='row' gap={2} alignItems='center'>
                 <Avatar sx={{height:40,width:40}} >
                       <Image
-                          src={'/img/Profile/profile.jpg'}
-                          height={40}
-                          width={40}
+                          src={'/img/Profile/profile.png'}
+                          height={80}
+                          width={80}
                           alt='Foto de Perfil'
                           aria-label='foto de perfil'
                           className={styles.avatar}

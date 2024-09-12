@@ -21,7 +21,8 @@ export default function Projects() {
   const textColor = theme.palette.secondary.light;
 
   const {ref, inView} = useInView({
-    threshold:0.3
+        threshold:0.3,
+        triggerOnce:true
   })
 
     const skills = [
