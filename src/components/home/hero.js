@@ -27,8 +27,8 @@ export default function Hero() {
                     <Avatar sx={avatarStyle}>
                         <Image
                             src={'/img/Profile/profile.png'}
-                            height={500}
-                            width={500}
+                            height={300}
+                            width={200}
                             alt='Foto de Perfil'
                             aria-label='foto de perfil'
                             className={styles.avatar}
