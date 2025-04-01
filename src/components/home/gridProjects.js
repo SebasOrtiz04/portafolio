@@ -17,6 +17,8 @@ export default function GridProjects() {
 
     const [selected , setSelected ] = useState('');
     const [projectsToRender , setProjectsToRender ] = useState(projects);
+    const [page, setPage] = useState(1);
+
     const {ref, inView} = useInView({
         threshold:0.2,
         triggerOnce:true
@@ -34,38 +36,40 @@ export default function GridProjects() {
     
 
   return (
-    <Box>
+    <Box ref={ref} >
 
-        <Stack direction='row' gap={2} marginY={5}>
-            {
-                chips.map(({label,key})=>(
+        <Zoom in={inView} timeout={500}>
+            <Stack direction='row' gap={2} marginY={5}>
+                {
+                    chips.map(({label,key})=>(
+                        <Chip 
+                        key={key} 
+                        size="large"
+                        variant={ key != selected ? 'outlined' : 'filled'}
+                        color={ key != selected ?'secondary' : 'primary'}  
+                        label={label} 
+                        sx={{color:textColor}} 
+                        onClick={() => handleChip(key)}
+                        />
+                    ))
+                }
+                { 
+                    selected 
+                    &&  
                     <Chip 
-                    key={key} 
                     size="large"
-                    variant={ key != selected ? 'outlined' : 'filled'}
-                    color={ key != selected ?'secondary' : 'primary'}  
-                    label={label} 
+                    variant='outlined' 
+                    color='secondary'  
+                    label='Borrar Filtro'
                     sx={{color:textColor}} 
-                    onClick={() => handleChip(key)}
+                    onClick={() => handleChip('')}
                     />
-                ))
-            }
-            { 
-                selected 
-                &&  
-                <Chip 
-                size="large"
-                variant='outlined' 
-                color='secondary'  
-                label='Borrar Filtro'
-                sx={{color:textColor}} 
-                onClick={() => handleChip('')}
-                />
-            }
-        </Stack>
-        <Box sx={{minHeight:'100vh'}}>
+                }
+            </Stack>
+        </Zoom>
+        <Box sx={{ minHeight: '100vh', transition: 'min-height 0.3s ease-in-out' }}>
 
-        <Grid ref={ref} container sx={{marginY:10}}  >
+        <Grid container sx={{marginY:10}}  >
                 {
                     projectsToRender.map(({srcImg,altImg,title,role,year,url,registers,owner,tecnologies},key)=>(
                         
@@ -110,9 +114,14 @@ export default function GridProjects() {
                                             <Stack direction={'row'} alignItems={'center'} gap={2} useFlexGap flexWrap={'wrap'}>
                                                 {
                                                     tecnologies.map((tecnologie,index)=>(
-                                                        <Typography key={`${index}${key}`} sx={{color:textColor}}>
-                                                            {devIcons[tecnologie]}
-                                                        </Typography>
+                                                        <Stack alignItems={'center'} key={`${index}${key}`}>
+                                                            <Typography sx={{color:textColor}}>
+                                                                {devIcons[tecnologie]}
+                                                            </Typography>
+                                                            <Typography variant="caption" key={`${index}${key}`} sx={{color:textColor}}>
+                                                                {tecnologie.toUpperCase()}
+                                                            </Typography>
+                                                        </Stack>
                                                     ))
                                                 }
                                             </Stack>

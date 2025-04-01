@@ -77,7 +77,7 @@ export const chips = [
 
 export const projects = [
     {
-        srcImg:'/img/Proyects/CLEU/cleu_background.png',
+        srcImg:'/img/Proyects/CLEU/website.png',
         altImg:'Login plataforma de encuestas.',
         title:'Website CLEU',
         owner:'CLEU',
@@ -89,20 +89,21 @@ export const projects = [
             'redux',
             'vite',
             'express',
-            'moongoDB'
+            'mongoose',
+            'mongoDB',
         ],  
         registers:[
             {
-                label:'Encuestas',
-                count:20000
+                label:'Leads generados',
+                count:1000
             }
         ],
-        url:'https://autoservicio.cleu.edu.mx/encuestas/admin-login',
+        url:'https://www.cleu.edu.mx',
         tag:'website',
     },
     {
-        srcImg:'/img/Proyects/CLEU/login.png',
-        altImg:'Login plataforma de encuestas.',
+        srcImg:'/img/Proyects/CLEU/email.png',
+        altImg:'Home gestor de Emails.',
         title:'Gestor de Emails',
         owner:'CLEU',
         role:'Desarrollador Fullstack',
@@ -111,66 +112,90 @@ export const projects = [
             'react',
             'mui',
             'redux',
-            'next',
+            'vite',
             'laravel',
             'mariaDB'
         ],  
         registers:[
             {
-                label:'Encuestas',
-                count:20000
+                label:'Registros',
+                count:21000
             }
         ],
-        url:'https://autoservicio.cleu.edu.mx/encuestas/admin-login',
+        url:'https://autoservicio.cleu.edu.mx/email-gestor/auth',
         tag:'platform',
     },
     {
-        srcImg:'/img/Proyects/CLEU/login.png',
-        altImg:'Login plataforma de encuestas.',
+        srcImg:'/img/Proyects/CLEU/encuestas.png',
+        altImg:'Home plataforma de encuestas.',
         title:'Plataforma de encuestas',
         owner:'CLEU',
         role:'Desarrollador Fullstack',
-        year:'2023 - 2024',
+        year:'2023 - 2025',
         tecnologies:[
             'react',
             'mui',
             'redux',
-            'next',
+            'vite',
             'laravel',
             'mariaDB'
         ],  
         registers:[
             {
                 label:'Encuestas',
-                count:20000
+                count:52000
             }
         ],
-        url:'https://autoservicio.cleu.edu.mx/encuestas/admin-login',
+        url:'https://autoservicio.cleu.edu.mx/encuestas/',
         tag:'platform',
     },
     {
-        srcImg:'/img/Proyects/CLEU/login.png',
-        altImg:'Login plataforma de encuestas.',
+        srcImg:'/img/Proyects/Geminis/landing.png',
+        altImg:'Landing Website comedor industrial géminis.',
         title:'Website Géminis',
         owner:'Comedor Industrial Géminis',
-        role:'Desarrollador Fullstack',
-        year:'2023 - 2024',
+        role:'Desarrollador Front End',
+        year:'2024',
         tecnologies:[
             'react',
-            'mui',
-            'redux',
-            'next',
-            'laravel',
-            'mariaDB'
+            'tailwind',
+            'astro',
         ],  
-        registers:[
-            {
-                label:'Encuestas',
-                count:20000
-            }
-        ],
-        url:'https://autoservicio.cleu.edu.mx/encuestas/admin-login',
-        tag:'platform',
+        registers:[],
+        url:'https://www.comedorindustrialgeminis.com/',
+        tag:'website',
+    },
+    {
+        srcImg:'/img/Proyects/Flownet/landing.png',
+        altImg:'Landing Flownet.',
+        title:'Landing Page Flownet',
+        owner:'Flownet',
+        role:'Desarrollador Front End',
+        year:'2024',
+        tecnologies:[
+            'react',
+            'tailwind',
+            'astro',
+        ],  
+        registers:[],
+        url:'https://www.flownet.com.ar/',
+        tag:'landing',
+    },
+    {
+        srcImg:'/img/Proyects/Orca/landingInflables.png',
+        altImg:'Landing Inflables Orca Eventos Sociales.',
+        title:'Landing Page Inflables',
+        owner:'Orca Eventos Sociales',
+        role:'Desarrollador Front End',
+        year:'2025',
+        tecnologies:[
+            'react',
+            'tailwind',
+            'astro',
+        ],  
+        registers:[],
+        url:'https://www.flownet.com.ar/',
+        tag:'landing',
     },
     {
         srcImg:'/img/Proyects/Artmex/dashboard.png',
