@@ -69,7 +69,61 @@ export const heroTypographyText = [
     'Cuentame que tienes en mente y te doy una propuesta.'
 ]
 
+export const chips = [
+    {key:'platform',label:'Plataformas Web'},
+    {key:'website',label:'Sitios Web'},
+    {key:'landing',label:'Landing Pages'},
+] 
+
 export const projects = [
+    {
+        srcImg:'/img/Proyects/CLEU/cleu_background.png',
+        altImg:'Login plataforma de encuestas.',
+        title:'Website CLEU',
+        owner:'CLEU',
+        role:'Desarrollador Fullstack',
+        year:'2024 - 2025',
+        tecnologies:[
+            'react',
+            'mui',
+            'redux',
+            'vite',
+            'express',
+            'moongoDB'
+        ],  
+        registers:[
+            {
+                label:'Encuestas',
+                count:20000
+            }
+        ],
+        url:'https://autoservicio.cleu.edu.mx/encuestas/admin-login',
+        tag:'website',
+    },
+    {
+        srcImg:'/img/Proyects/CLEU/login.png',
+        altImg:'Login plataforma de encuestas.',
+        title:'Gestor de Emails',
+        owner:'CLEU',
+        role:'Desarrollador Fullstack',
+        year:'2024 - 2025',
+        tecnologies:[
+            'react',
+            'mui',
+            'redux',
+            'next',
+            'laravel',
+            'mariaDB'
+        ],  
+        registers:[
+            {
+                label:'Encuestas',
+                count:20000
+            }
+        ],
+        url:'https://autoservicio.cleu.edu.mx/encuestas/admin-login',
+        tag:'platform',
+    },
     {
         srcImg:'/img/Proyects/CLEU/login.png',
         altImg:'Login plataforma de encuestas.',
@@ -92,7 +146,31 @@ export const projects = [
             }
         ],
         url:'https://autoservicio.cleu.edu.mx/encuestas/admin-login',
-        private:true,
+        tag:'platform',
+    },
+    {
+        srcImg:'/img/Proyects/CLEU/login.png',
+        altImg:'Login plataforma de encuestas.',
+        title:'Website Géminis',
+        owner:'Comedor Industrial Géminis',
+        role:'Desarrollador Fullstack',
+        year:'2023 - 2024',
+        tecnologies:[
+            'react',
+            'mui',
+            'redux',
+            'next',
+            'laravel',
+            'mariaDB'
+        ],  
+        registers:[
+            {
+                label:'Encuestas',
+                count:20000
+            }
+        ],
+        url:'https://autoservicio.cleu.edu.mx/encuestas/admin-login',
+        tag:'platform',
     },
     {
         srcImg:'/img/Proyects/Artmex/dashboard.png',
@@ -119,7 +197,7 @@ export const projects = [
             }
         ],
         url:'https://artmeximportscorp.com/auth/sign-in',
-        private:true,
+        tag:'platform',
         probe:'https://artmex-test.up.railway.app/auth/sign-in'
     },
     {
@@ -139,23 +217,7 @@ export const projects = [
             'mongoDB'
         ],
         registers:[],
-        url:'https://salonorca.com/'
-    },
-    {
-        srcImg:'/img/Proyects/Buho/dashboard.png',
-        altImg:'Dashboard Buho',
-        title:'ERP Ecommerce abarrotes.',
-        owner:'Buho Tienda de abarrotes',
-        role:'Arquitecto de Frontend',
-        year:'2023',
-        tecnologies:[
-            'react',
-            'mui',
-            'redux',
-            'next',
-        ],
-        registers:[],
-        url:'https://buho-panel.up.railway.app/',
-        probe:'https://buho-webapp1.up.railway.app/client-list/'
+        url:'https://salonorca.com/',
+        tag:'website',
     },
 ]
