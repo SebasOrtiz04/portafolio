@@ -1,28 +1,77 @@
 'use client'
 
 import { devIcons } from "@/lib/data/devIcons";
-import { projects } from "@/lib/data/initialStates";
+import { chips, projects } from "@/lib/data/initialStates";
+import { cookProjects } from "@/lib/helpers";
 import { useTheme } from "@emotion/react";
-import { Card, CardActionArea, CardContent, CardHeader, CardMedia, Chip, Grid, Stack, Typography, Zoom } from "@mui/material";
-import { useRouter } from "next/router";
+import { Box, Card, CardActionArea, CardContent, CardHeader, CardMedia, Chip, Grid, Stack, Typography, Zoom } from "@mui/material";
+import { useEffect, useState } from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
 export default function GridProjects() {
 
     const theme = useTheme();
-    // const router = useRouter()
 
     const textColor = theme.palette.secondary.light;
+
+    const [selected , setSelected ] = useState('');
+    const [projectsToRender , setProjectsToRender ] = useState(projects);
+    const [page, setPage] = useState(1);
 
     const {ref, inView} = useInView({
         threshold:0.2,
         triggerOnce:true
     })
+
+    const handleChip = key => setSelected(key);
+
+    useEffect(()=>{
+        let fullList = [...projects];
+        if(selected)
+            fullList = cookProjects(fullList, selected);
+       setProjectsToRender(fullList)
+    },[selected])
+
+    
+
   return (
-        <Grid ref={ref} container sx={{marginY:10}}  >
+    <Box ref={ref} >
+
+        <Zoom in={inView} timeout={500}>
+            <Stack direction='row' gap={2} marginY={5}>
                 {
-                    projects.map(({srcImg,altImg,title,role,year,url,registers,owner,tecnologies},key)=>(
+                    chips.map(({label,key})=>(
+                        <Chip 
+                        key={key} 
+                        size="large"
+                        variant={ key != selected ? 'outlined' : 'filled'}
+                        color={ key != selected ?'secondary' : 'primary'}  
+                        label={label} 
+                        sx={{color:textColor}} 
+                        onClick={() => handleChip(key)}
+                        />
+                    ))
+                }
+                { 
+                    selected 
+                    &&  
+                    <Chip 
+                    size="large"
+                    variant='outlined' 
+                    color='secondary'  
+                    label='Borrar Filtro'
+                    sx={{color:textColor}} 
+                    onClick={() => handleChip('')}
+                    />
+                }
+            </Stack>
+        </Zoom>
+        <Box sx={{ minHeight: '100vh', transition: 'min-height 0.3s ease-in-out' }}>
+
+        <Grid container sx={{marginY:10}}  >
+                {
+                    projectsToRender.map(({srcImg,altImg,title,role,year,url,registers,owner,tecnologies},key)=>(
                         
                         <Zoom
                         in={inView}
@@ -65,9 +114,14 @@ export default function GridProjects() {
                                             <Stack direction={'row'} alignItems={'center'} gap={2} useFlexGap flexWrap={'wrap'}>
                                                 {
                                                     tecnologies.map((tecnologie,index)=>(
-                                                        <Typography key={`${index}${key}`} sx={{color:textColor}}>
-                                                            {devIcons[tecnologie]}
-                                                        </Typography>
+                                                        <Stack alignItems={'center'} key={`${index}${key}`}>
+                                                            <Typography sx={{color:textColor}}>
+                                                                {devIcons[tecnologie]}
+                                                            </Typography>
+                                                            <Typography variant="caption" key={`${index}${key}`} sx={{color:textColor}}>
+                                                                {tecnologie.toUpperCase()}
+                                                            </Typography>
+                                                        </Stack>
                                                     ))
                                                 }
                                             </Stack>
@@ -79,5 +133,7 @@ export default function GridProjects() {
                     ))
                 }
         </Grid>
+        </Box>
+    </Box>
   )
 }

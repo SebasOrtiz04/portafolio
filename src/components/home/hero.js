@@ -26,7 +26,7 @@ export default function Hero() {
                 <Grow timeout={400} in={inView}>
                     <Avatar sx={avatarStyle}>
                         <Image
-                            src={'/img/Profile/profile.png'}
+                            src={'/img/Profile/profile2.jpg'}
                             height={300}
                             width={200}
                             alt='Foto de Perfil'
@@ -51,8 +51,8 @@ export default function Hero() {
                     variant="outlined"
                     color="secondary"
                     component="a"
-                    href="/docs/CV Juan Sebastian Ortiz Castro.pdf" // Ruta al archivo estático
-                    download="CV Juan Sebastian Ortiz Castro.pdf" // Nombre con el que se descargará el archivo
+                    href="/docs/CV Juan Sebastisan 2025 Abril.pdf" // Ruta al archivo estático
+                    download="CV Juan Sebastisan 2025 Abril.pdf" // Nombre con el que se descargará el archivo
                 >
                     Descarga mi CV
                 </Button>

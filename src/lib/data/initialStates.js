@@ -69,30 +69,133 @@ export const heroTypographyText = [
     'Cuentame que tienes en mente y te doy una propuesta.'
 ]
 
+export const chips = [
+    {key:'platform',label:'Plataformas Web'},
+    {key:'website',label:'Sitios Web'},
+    {key:'landing',label:'Landing Pages'},
+] 
+
 export const projects = [
     {
-        srcImg:'/img/Proyects/CLEU/login.png',
+        srcImg:'/img/Proyects/CLEU/website.png',
         altImg:'Login plataforma de encuestas.',
-        title:'Plataforma de encuestas',
+        title:'Website CLEU',
         owner:'CLEU',
         role:'Desarrollador Fullstack',
-        year:'2023 - 2024',
+        year:'2024 - 2025',
         tecnologies:[
             'react',
             'mui',
             'redux',
-            'next',
+            'vite',
+            'express',
+            'mongoose',
+            'mongoDB',
+        ],  
+        registers:[
+            {
+                label:'Leads generados',
+                count:1000
+            }
+        ],
+        url:'https://www.cleu.edu.mx',
+        tag:'website',
+    },
+    {
+        srcImg:'/img/Proyects/CLEU/email.png',
+        altImg:'Home gestor de Emails.',
+        title:'Gestor de Emails',
+        owner:'CLEU',
+        role:'Desarrollador Fullstack',
+        year:'2024 - 2025',
+        tecnologies:[
+            'react',
+            'mui',
+            'redux',
+            'vite',
+            'laravel',
+            'mariaDB'
+        ],  
+        registers:[
+            {
+                label:'Registros',
+                count:21000
+            }
+        ],
+        url:'https://autoservicio.cleu.edu.mx/email-gestor/auth',
+        tag:'platform',
+    },
+    {
+        srcImg:'/img/Proyects/CLEU/encuestas.png',
+        altImg:'Home plataforma de encuestas.',
+        title:'Plataforma de encuestas',
+        owner:'CLEU',
+        role:'Desarrollador Fullstack',
+        year:'2023 - 2025',
+        tecnologies:[
+            'react',
+            'mui',
+            'redux',
+            'vite',
             'laravel',
             'mariaDB'
         ],  
         registers:[
             {
                 label:'Encuestas',
-                count:20000
+                count:52000
             }
         ],
-        url:'https://autoservicio.cleu.edu.mx/encuestas/admin-login',
-        private:true,
+        url:'https://autoservicio.cleu.edu.mx/encuestas/',
+        tag:'platform',
+    },
+    {
+        srcImg:'/img/Proyects/Geminis/landing.png',
+        altImg:'Landing Website comedor industrial géminis.',
+        title:'Website Géminis',
+        owner:'Comedor Industrial Géminis',
+        role:'Desarrollador Front End',
+        year:'2024',
+        tecnologies:[
+            'react',
+            'tailwind',
+            'astro',
+        ],  
+        registers:[],
+        url:'https://www.comedorindustrialgeminis.com/',
+        tag:'website',
+    },
+    {
+        srcImg:'/img/Proyects/Flownet/landing.png',
+        altImg:'Landing Flownet.',
+        title:'Landing Page Flownet',
+        owner:'Flownet',
+        role:'Desarrollador Front End',
+        year:'2024',
+        tecnologies:[
+            'react',
+            'tailwind',
+            'astro',
+        ],  
+        registers:[],
+        url:'https://www.flownet.com.ar/',
+        tag:'landing',
+    },
+    {
+        srcImg:'/img/Proyects/Orca/landingInflables.png',
+        altImg:'Landing Inflables Orca Eventos Sociales.',
+        title:'Landing Page Inflables',
+        owner:'Orca Eventos Sociales',
+        role:'Desarrollador Front End',
+        year:'2025',
+        tecnologies:[
+            'react',
+            'tailwind',
+            'astro',
+        ],  
+        registers:[],
+        url:'https://www.flownet.com.ar/',
+        tag:'landing',
     },
     {
         srcImg:'/img/Proyects/Artmex/dashboard.png',
@@ -119,7 +222,7 @@ export const projects = [
             }
         ],
         url:'https://artmeximportscorp.com/auth/sign-in',
-        private:true,
+        tag:'platform',
         probe:'https://artmex-test.up.railway.app/auth/sign-in'
     },
     {
@@ -139,23 +242,7 @@ export const projects = [
             'mongoDB'
         ],
         registers:[],
-        url:'https://salonorca.com/'
-    },
-    {
-        srcImg:'/img/Proyects/Buho/dashboard.png',
-        altImg:'Dashboard Buho',
-        title:'ERP Ecommerce abarrotes.',
-        owner:'Buho Tienda de abarrotes',
-        role:'Arquitecto de Frontend',
-        year:'2023',
-        tecnologies:[
-            'react',
-            'mui',
-            'redux',
-            'next',
-        ],
-        registers:[],
-        url:'https://buho-panel.up.railway.app/',
-        probe:'https://buho-webapp1.up.railway.app/client-list/'
+        url:'https://salonorca.com/',
+        tag:'website',
     },
 ]
