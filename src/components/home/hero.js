@@ -1,12 +1,12 @@
 'use client'
 
-import { Avatar, Box, Button, Container, Grid, Grow, Typography, useTheme, Zoom } from '@mui/material'
-import styles from './styles.module.css'
-import Image from 'next/image';
-import TypewriterEffect from '../utils/typeWritinfefect';
-import { heroTypographyText } from '@/lib/data/initialStates';
 import { headerStyles } from '@/app/styles/homeStyles';
+import { heroTypographyText } from '@/lib/data/initialStates';
+import { Avatar, Button, Container, Grid, Grow, Typography, useTheme, Zoom } from '@mui/material';
+import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
+import TypewriterEffect from '../utils/typeWritinfefect';
+import styles from './styles.module.css';
 
 const {subTitleStyle,gridContainerStyle,avatarGridStyle,typographyText,textStyle,titleStyle,avatarStyle} = headerStyles;
 export default function Hero() {
@@ -26,7 +26,7 @@ export default function Hero() {
                 <Grow timeout={400} in={inView}>
                     <Avatar sx={avatarStyle}>
                         <Image
-                            src={'/img/Profile/profile.png'}
+                            src={'/img/Profile/profile2.jpg'}
                             height={300}
                             width={200}
                             alt='Foto de Perfil'
@@ -51,8 +51,8 @@ export default function Hero() {
                     variant="outlined"
                     color="secondary"
                     component="a"
-                    href="/docs/CV Juan Sebastian Ortiz Castro.pdf" // Ruta al archivo estático
-                    download="CV Juan Sebastian Ortiz Castro.pdf" // Nombre con el que se descargará el archivo
+                    href="/docs/CV Juan Sebastisan 2025 Abril.pdf" // Ruta al archivo estático
+                    download="CV Juan Sebastisan 2025 Abril.pdf" // Nombre con el que se descargará el archivo
                 >
                     Descarga mi CV
                 </Button>

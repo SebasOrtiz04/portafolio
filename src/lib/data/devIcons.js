@@ -12,6 +12,7 @@ import { SiPostgresql } from "react-icons/si";
 import { TbBrandNodejs } from "react-icons/tb";
 import { SiMongodb } from "react-icons/si";
 import { SiMongoose } from "react-icons/si";
+import { SiAstro } from "react-icons/si";
 
 const iconSize = 32;
 
@@ -29,5 +30,6 @@ export const devIcons = {
     postgreSQL:<SiPostgresql size={iconSize} />,
     node:<TbBrandNodejs size={iconSize}/>,
     mongoDB:<SiMongodb size={iconSize} />,
-    mongoose:<SiMongoose size={iconSize} />
+    mongoose:<SiMongoose size={iconSize} />,
+    astro:<SiAstro size={iconSize} />,
 }
