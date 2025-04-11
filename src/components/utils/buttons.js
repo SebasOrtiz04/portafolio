@@ -1,12 +1,12 @@
 
 'use client'
 
-import { forwardRef, useState } from "react";
-import { Button ,IconButton, Dialog, Slide, AppBar, Toolbar, Typography} from "@mui/material"
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import CloseIcon from '@mui/icons-material/Close';
-import HomeIcon from '@mui/icons-material/Home';
 import EditCalendarIcon from '@mui/icons-material/EditCalendar';
+import HomeIcon from '@mui/icons-material/Home';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { AppBar, Button, Dialog, IconButton, Slide, Toolbar, Typography } from "@mui/material";
+import { forwardRef, useState } from "react";
 
 const whatsAppHRef = 'https://wa.me/2226622778?text=Hola,%20estoy%20interesado%20en%20el%20salón%20jardín.';
 
