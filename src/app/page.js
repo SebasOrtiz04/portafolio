@@ -1,8 +1,7 @@
-import React from 'react'
-import {Box} from '@mui/material'
+import About from '@/components/home/about';
 import Hero from '@/components/home/hero';
-import Projects from '@/components/home/projects';
-import Tecnologies from '@/components/home/tecnologies';
+import PorjectsCarousel from '@/components/home/porjectsCarousel';
+import { Box } from '@mui/material';
 
 // export const metadata = {
 //   title: {
@@ -26,8 +25,8 @@ export default function Home() {
   return (
     <Box sx={{maxWidth:'100vw',overflowX:'hidden'}}>
       <Hero/>
-      <Projects/>
-      <Tecnologies/>
+      <About/>
+      <PorjectsCarousel/>
     </Box>
   )
 }

@@ -1,19 +1,14 @@
 'use client'
 
-import { Box, Button, Card, CardActionArea, CardContent, CardHeader, CardMedia, Chip, Container, Grid, Grow, Paper, Stack, Typography, useTheme, Zoom } from '@mui/material'
-import React, { useState } from 'react'
-import { Title2 } from '../utils/titles';
-import { useInView } from 'react-intersection-observer';
-import SchoolIcon from '@mui/icons-material/School';
-import FlareIcon from '@mui/icons-material/Flare';
 import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
-import { projects } from '@/lib/data/initialStates';
+import FlareIcon from '@mui/icons-material/Flare';
+import SchoolIcon from '@mui/icons-material/School';
+import { Container, Grow, Paper, Stack, Typography, useTheme, Zoom } from '@mui/material';
 import { useRouter } from 'next/navigation';
-import { FaReact } from "react-icons/fa";
-import { devIcons } from '@/lib/data/devIcons';
-import GridProjects from './gridProjects';
+import { useInView } from 'react-intersection-observer';
+import { Title2 } from '../utils/titles';
 
-export default function Projects() {
+export default function About() {
   
   const theme = useTheme();
   const router = useRouter()
@@ -42,7 +37,7 @@ export default function Projects() {
     
     return (
         <Container >
-            <Stack gap={10} sx={{marginBottom:10}}>
+            <Stack gap={10} sx={{marginBottom:0}}>
                 <Title2 title={'Un poco sobre mi'}/>
 
                 <Grow in={inView}>
@@ -73,9 +68,6 @@ export default function Projects() {
                 </Stack>
             </Stack>
 
-            <Title2 title={'Algunos de mis proyectos'} />
-
-            <GridProjects/>
         </Container>
   )
 }

@@ -1,12 +1,12 @@
 'use client'
 
-import { Avatar, Box, Button, Container, Grid, Grow, Typography, useTheme, Zoom } from '@mui/material'
-import styles from './styles.module.css'
-import Image from 'next/image';
-import TypewriterEffect from '../utils/typeWritinfefect';
-import { heroTypographyText } from '@/lib/data/initialStates';
 import { headerStyles } from '@/app/styles/homeStyles';
+import { heroTypographyText } from '@/lib/data/initialStates';
+import { Avatar, Button, Container, Grid, Grow, Typography, useTheme, Zoom } from '@mui/material';
+import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
+import TypewriterEffect from '../utils/typeWritinfefect';
+import styles from './styles.module.css';
 
 const {subTitleStyle,gridContainerStyle,avatarGridStyle,typographyText,textStyle,titleStyle,avatarStyle} = headerStyles;
 export default function Hero() {
