@@ -1,54 +1,7 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-export const menuList = [
-    // {
-    //     section_name:'Orca Eventos Sociales',
-    //     list:[
-    //         {
-    //             label:'Inicio',
-    //             icon:<HomeIcon/>,
-    //             link:'/'                
-    //         },
-    //         {
-    //             label:'Contacto',
-    //             icon:<ImportContactsIcon/>,
-    //             link:'/contact'                
-    //         },
-    //         {
-    //             label:'Galería',
-    //             icon:<CameraRollIcon/>,
-    //             link:'/galery'                
-    //         },
-    //     ]
-    // },
-    // {
-    //     section_name:'Mi Cuenta',
-    //     list:[
-    //         {
-    //             label:'Mis Controladores',
-    //             icon:<DeveloperBoardIcon/>,
-    //             link:'/controllers'                
-    //         }
-    //     ]
-    // },
-    // {
-    //     section_name:'Administrador',
-    //     list:[
-    //         {
-    //             label:'Administrador',
-    //             icon:<AdminPanelSettingsIcon/>,
-    //             link:'/admin'                
-    //         },
-    //         {
-    //             label:'Dispositivos',
-    //             icon:<DeveloperBoardIcon/>,
-    //             link:'/admin/devices'                
-    //         },
-    //     ]
-    // },
-]
-
+export const menuList = [];
 
 export const socialLinks = [
     {
@@ -95,7 +48,7 @@ export const projects = [
         registers:[
             {
                 label:'Leads generados',
-                count:1000
+                count:3000
             }
         ],
         url:'https://www.cleu.edu.mx',
@@ -119,7 +72,7 @@ export const projects = [
         registers:[
             {
                 label:'Registros',
-                count:21000
+                count:30000
             }
         ],
         url:'https://autoservicio.cleu.edu.mx/email-gestor/auth',
@@ -143,7 +96,7 @@ export const projects = [
         registers:[
             {
                 label:'Encuestas',
-                count:52000
+                count:70000
             }
         ],
         url:'https://autoservicio.cleu.edu.mx/encuestas/',
@@ -162,24 +115,8 @@ export const projects = [
             'astro',
         ],  
         registers:[],
-        url:'https://www.comedorindustrialgeminis.com/',
+        url:'https://www.comedorindustrialgeminis.com',
         tag:'website',
-    },
-    {
-        srcImg:'/img/Proyects/Flownet/landing.png',
-        altImg:'Landing Flownet.',
-        title:'Landing Page Flownet',
-        owner:'Flownet',
-        role:'Desarrollador Front End',
-        year:'2024',
-        tecnologies:[
-            'react',
-            'tailwind',
-            'astro',
-        ],  
-        registers:[],
-        url:'https://www.flownet.com.ar/',
-        tag:'landing',
     },
     {
         srcImg:'/img/Proyects/Orca/landingInflables.png',
@@ -194,7 +131,7 @@ export const projects = [
             'astro',
         ],  
         registers:[],
-        url:'https://www.flownet.com.ar/',
+        url:'https://inflables.salonorca.com.mx',
         tag:'landing',
     },
     {
@@ -218,10 +155,10 @@ export const projects = [
         registers:[
             {
                 label:'Cajas',
-                count:8000
+                count:20000
             }
         ],
-        url:'https://artmeximportscorp.com/auth/sign-in',
+        url:'https://artmex.up.railway.app/auth/sign-in',
         tag:'platform',
         probe:'https://artmex-test.up.railway.app/auth/sign-in'
     },
@@ -242,7 +179,7 @@ export const projects = [
             'mongoDB'
         ],
         registers:[],
-        url:'https://salonorca.com/',
+        url:'https://salonorca.com.mx',
         tag:'website',
     },
 ]
